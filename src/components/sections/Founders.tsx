@@ -1,0 +1,88 @@
+import React from 'react';
+import { Linkedin, Mail } from 'lucide-react';
+import joelImage from '@/assets/images/joel-arcus.png';
+import quincyImage from '@/assets/images/quincy-beukes.png';
+
+const founders = [
+    {
+        name: "Joel Arcus",
+        role: "Co-Founder & Managing Partner",
+        image: joelImage,
+        bio: "Joel’s work focuses on sharpening judgement, reducing distortion, and helping leaders think clearly under pressure.",
+        details: [
+            "Decision-bound coaching",
+            "Clarity under pressure",
+            "Authority preserved"
+        ]
+    },
+    {
+        name: "Quincy Beukes",
+        role: "Co-Founder & Research Partner",
+        image: quincyImage,
+        bio: "Quincy’s work focuses on transforming complex external signal into decision-grade clarity at the point of commitment.",
+        details: [
+            "Decision-led research",
+            "Signal integration",
+            "Trade-off clarity"
+        ]
+    }
+];
+
+const Founders: React.FC = () => {
+    return (
+        <section className="py-24 bg-brand-navy">
+            <div className="max-w-300 mx-auto px-6">
+                <div className="flex flex-col items-center mb-16 text-center">
+                    <span className="text-brand-gold font-technical text-sm tracking-widest uppercase mb-4">THE PARTNERSHIP</span>
+                    <h2 className="text-4xl md:text-5xl font-technical mb-6 leading-tight">A partnership built for consequence.</h2>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    {founders.map((founder, index) => (
+                        <div key={index} className="group relative bg-white/2 border border-white/5 hover:border-brand-gold/30 transition-all duration-700 rounded-3xl overflow-hidden">
+                            {/* Large Founder Image */}
+                            <div className="relative aspect-square overflow-hidden bg-brand-navy">
+                                <img src={founder.image} alt={founder.name} className="w-full h-full object-cover object-top" />
+                                <div className="absolute inset-0 bg-linear-to-b from-transparent via-brand-navy/20 to-brand-navy/70" />
+
+                                {/* Name + title */}
+                                <div className="absolute bottom-4 left-8 right-8">
+                                    <h3 className="text-3xl font-technical mb-2 text-white drop-shadow-sm">{founder.name}</h3>
+                                    <p className="text-brand-gold font-technical text-sm uppercase tracking-widest">{founder.role}</p>
+                                </div>
+                            </div>
+
+                            {/* Content always visible */}
+                            <div className="p-8 space-y-4">
+                                <p className="text-white/75 text-base md:text-lg font-light leading-relaxed">
+                                    {founder.bio}
+                                </p>
+
+                                <div className="space-y-3">
+                                    {founder.details.map((detail, i) => (
+                                        <div key={i} className="flex items-start gap-3">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 shrink-0" />
+                                            <span className="text-white/60 text-sm font-light leading-relaxed">{detail}</span>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className="flex gap-3">
+                                    <a href="#" className="p-2.5 bg-white/10 border border-white/15 rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300">
+                                        <Linkedin className="w-4.5 h-4.5" />
+                                    </a>
+                                    <a href="#" className="p-2.5 bg-white/10 border border-white/15 rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300">
+                                        <Mail className="w-4.5 h-4.5" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+
+export default Founders;
