@@ -1,11 +1,26 @@
 import React from 'react';
-import Founders from '@/components/sections/Founders';
+import Image from 'next/image';
+import { Linkedin, Mail } from 'lucide-react';
+import WorkFinalCTA from '@/components/sections/WorkFinalCTA';
+import heroBg from '@/assets/images/how-we-work.png';
 
 export default function AboutPage() {
     return (
         <div className="min-h-screen bg-brand-navy">
-            <section className="section-padding">
-                <div className="container-editorial">
+            <section className="relative pt-48 pb-24 overflow-hidden bg-brand-navy">
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src={heroBg}
+                        alt=""
+                        fill
+                        className="object-cover opacity-40 grayscale"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-linear-to-b from-brand-navy via-brand-navy/40 to-brand-navy" />
+                    <div className="absolute inset-0 bg-linear-to-r from-brand-navy via-transparent to-brand-navy opacity-80" />
+                </div>
+
+                <div className="container-editorial relative z-10">
                     <div className="max-w-4xl">
                         <span className="label-tech mb-6">ABOUT US</span>
                         <h1 className="mb-8">A firm built for consequence.</h1>
@@ -77,7 +92,103 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <Founders />
+            <section className="section-padding">
+                <div className="container-editorial">
+                    <div className="mb-16">
+                        <span className="label-tech mb-6">THE PARTNERSHIP</span>
+                        <h2 className="mb-8">Founders</h2>
+                        <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed max-w-3xl">
+                            The partnership blends decision-bound coaching with decision-led research, ensuring
+                            clarity is preserved without diluting authority.
+                        </p>
+                    </div>
+
+                    <div className="space-y-12">
+                        <div className="frosted-glass rounded-[2.5rem] overflow-hidden">
+                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
+                                <div className="lg:col-span-7 p-10 md:p-12 space-y-6">
+                                    <div>
+                                        <h3 className="text-2xl md:text-3xl font-technical text-white mb-2">Joel Arcus</h3>
+                                        <p className="label-tech text-brand-gold">Co-Founder &amp; Managing Partner</p>
+                                    </div>
+                                    <p className="text-white/70 font-light leading-relaxed">
+                                        Joel brings more than two decades of leadership, coaching, and advisory experience
+                                        across complex environments. His work focuses on sharpening judgement under pressure,
+                                        reducing distortion, and creating decision clarity that leaders can own.
+                                    </p>
+                                    <p className="text-white/60 font-light leading-relaxed">
+                                        He operates at the intersection of human insight and structured analysis, helping
+                                        leaders navigate complexity across sectors and geographies with discretion and discipline.
+                                    </p>
+                                    <p className="text-white/60 font-light leading-relaxed">
+                                        The work is practical and decision-bound, designed to stabilise clarity, surface
+                                        trade-offs, and protect ownership when pressure threatens coherence.
+                                    </p>
+                                    <div className="flex gap-3 pt-2">
+                                        <a href="#" className="p-2.5 bg-white/10 border border-white/15 rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300">
+                                            <Linkedin className="w-4.5 h-4.5" />
+                                        </a>
+                                        <a href="#" className="p-2.5 bg-white/10 border border-white/15 rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300">
+                                            <Mail className="w-4.5 h-4.5" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className="lg:col-span-5 relative min-h-[320px] lg:min-h-[420px]">
+                                    <Image
+                                        src={require('@/assets/images/joel-arcus.png')}
+                                        alt="Joel Arcus"
+                                        fill
+                                        className="object-cover object-top"
+                                    />
+                                    <div className="absolute inset-0 bg-linear-to-b from-transparent via-brand-navy/10 to-brand-navy/70" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="frosted-glass rounded-[2.5rem] overflow-hidden">
+                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
+                                <div className="lg:col-span-5 relative min-h-[320px] lg:min-h-[420px] order-last lg:order-first">
+                                    <Image
+                                        src={require('@/assets/images/quincy-beukes.png')}
+                                        alt="Quincy Beukes"
+                                        fill
+                                        className="object-cover object-top"
+                                    />
+                                    <div className="absolute inset-0 bg-linear-to-b from-transparent via-brand-navy/10 to-brand-navy/70" />
+                                </div>
+                                <div className="lg:col-span-7 p-10 md:p-12 space-y-6">
+                                    <div>
+                                        <h3 className="text-2xl md:text-3xl font-technical text-white mb-2">Quincy Beukes</h3>
+                                        <p className="label-tech text-brand-gold">Co-Founder &amp; Research Partner</p>
+                                    </div>
+                                    <p className="text-white/70 font-light leading-relaxed">
+                                        Quincy brings deep international experience across finance, strategy, and private
+                                        capital. His focus is transforming complex external signal into decision-grade
+                                        clarity that can be used at the point of commitment.
+                                    </p>
+                                    <p className="text-white/60 font-light leading-relaxed">
+                                        He combines commercial acumen with rigorous diagnostic insight, ensuring research
+                                        is decision-led, restrained, and aligned to the authority of the leader.
+                                    </p>
+                                    <p className="text-white/60 font-light leading-relaxed">
+                                        The result is structured signal that clarifies options, exposes second-order effects,
+                                        and strengthens decision ownership without replacing judgement.
+                                    </p>
+                                    <div className="flex gap-3 pt-2">
+                                        <a href="#" className="p-2.5 bg-white/10 border border-white/15 rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300">
+                                            <Linkedin className="w-4.5 h-4.5" />
+                                        </a>
+                                        <a href="#" className="p-2.5 bg-white/10 border border-white/15 rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300">
+                                            <Mail className="w-4.5 h-4.5" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <WorkFinalCTA />
         </div>
     );
 }
