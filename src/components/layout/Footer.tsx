@@ -47,10 +47,8 @@ const Footer: React.FC = () => {
                         <h4 className="font-technical text-sm uppercase tracking-widest mb-8 text-brand-gold">The Firm</h4>
                         <ul className="space-y-4">
                             <li><Link href="/about" className="text-white/50 hover:text-white transition-colors text-sm">Philosophy</Link></li>
-                            <li><Link href="/founders" className="text-white/50 hover:text-white transition-colors text-sm">Founders</Link></li>
-                            <li><Link href="/research" className="text-white/50 hover:text-white transition-colors text-sm">Research Library</Link></li>
-                            <li><a href="#" className="text-white/50 hover:text-white transition-colors text-sm">Privacy Policy</a></li>
-                            <li><a href="#" className="text-white/50 hover:text-white transition-colors text-sm">Terms of Engagement</a></li>
+                            <li><Link href="/privacy-policy" className="text-white/50 hover:text-white transition-colors text-sm">Privacy Policy</Link></li>
+                            <li><Link href="/terms-of-engagement" className="text-white/50 hover:text-white transition-colors text-sm">Terms of Engagement</Link></li>
                         </ul>
                     </div>
 

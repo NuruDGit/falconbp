@@ -34,13 +34,13 @@ const Navbar: React.FC = () => {
                 <div className="hidden md:flex items-center bg-white/3 border border-white/8 backdrop-blur-xl p-1.5 rounded-full">
                     <ul className="flex items-center gap-2 list-none">
                         <li>
-                            <Link href="/how-we-work" className="text-[0.8rem] font-medium text-white/70 px-5 py-2.5 rounded-full hover:text-white hover:bg-white/5 transition-all">
-                                How We Work
+                            <Link href="/" className="text-[0.8rem] font-medium text-white/70 px-5 py-2.5 rounded-full hover:text-white hover:bg-white/5 transition-all">
+                                Home
                             </Link>
                         </li>
                         <li>
-                            <Link href="/research" className="text-[0.8rem] font-medium text-white/70 px-5 py-2.5 rounded-full hover:text-white hover:bg-white/5 transition-all">
-                                Research
+                            <Link href="/how-we-work" className="text-[0.8rem] font-medium text-white/70 px-5 py-2.5 rounded-full hover:text-white hover:bg-white/5 transition-all">
+                                How We Work
                             </Link>
                         </li>
                         <li>
