@@ -1,4 +1,13 @@
 node_modules
+.next
+build_failed*.log
+build_log.txt
+p3000.html
+p3005.html
+tsc.log
+tsc_check.log
+tsc_final.log
+tsconfig.tsbuildinfo
 .DS_Store
 dist
 dist-ssr
