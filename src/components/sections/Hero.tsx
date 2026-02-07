@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Play } from 'lucide-react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import csuiteImage from '@/assets/images/c-suite-executives.png';
 
@@ -8,7 +9,7 @@ const Hero: React.FC = () => {
         <section className="relative min-h-screen w-full flex items-center justify-center bg-brand-navy pt-48 pb-32 overflow-hidden">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
-                <img src={csuiteImage} alt="" className="w-full h-full object-cover opacity-70" />
+                <Image src={csuiteImage} alt="" className="w-full h-full object-cover opacity-70" />
                 <div className="absolute inset-0 bg-linear-to-b from-brand-navy/20 via-brand-navy/50 to-brand-navy/90" />
             </div>
 

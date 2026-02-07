@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useEffect, useMemo, useState } from 'react';
-import worldMapSvg from '../../images/world_map.svg';
+import worldMapSvg from '@/assets/images/world_map.svg';
 
 const PRICE_OPTIONS = [
     { id: 'single', label: 'Single session', price: 2000 },
@@ -51,7 +53,7 @@ const FlagIcon: React.FC<{ code: typeof CURRENCIES[number] }> = ({ code }) => {
         SAR: (
             <svg viewBox="0 0 36 27" className="w-5 h-4">
                 <rect width="36" height="27" fill="#165B33"/>
-                <text x="18" y="18" fontSize="16" fill="#FFF" textAnchor="middle" fontFamily="Arial">ﷲ</text>
+                <text x="18" y="17" fontSize="10" fill="#FFF" textAnchor="middle" fontFamily="Arial">SA</text>
             </svg>
         ),
         AUD: (
@@ -190,9 +192,8 @@ const PricingCalculator: React.FC = () => {
 
     return (
         <div className="relative bg-white/2 border border-white/5 rounded-3xl p-10 overflow-hidden">
-            {/* SVG World Map Background */}
             <div className="absolute inset-0 opacity-20 pointer-events-none">
-                <img src={worldMapSvg} alt="" className="w-full h-full object-cover" />
+                <img src={worldMapSvg.src || worldMapSvg} alt="" className="w-full h-full object-cover" />
             </div>
             
             <div className="relative z-10">
@@ -207,7 +208,7 @@ const PricingCalculator: React.FC = () => {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                         </span>
-                        {status === 'loading' ? 'Refreshing exchange rates…' : 'Rates refreshed daily'}
+                        {status === 'loading' ? 'Refreshing exchange rates...' : 'Rates refreshed daily'}
                     </div>
                 </div>
             </div>

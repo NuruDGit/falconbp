@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import clientAnonymityImg from '@/assets/images/client-anonymity.png';
 import noCaseStudiesImg from '@/assets/images/no-public-case-studies.png';
@@ -42,7 +43,7 @@ const TrustAndFinalCTA: React.FC = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {trustPoints.map((point, index) => (
                             <div key={index} className="group relative overflow-hidden rounded-3xl border border-white/5 hover:border-brand-gold/25 transition-all h-96">
-                                <img src={point.image} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                <Image src={point.image} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-brand-navy/95" />
                                 <div className="absolute bottom-0 left-0 right-0 p-8">
                                     <p className="text-white text-base leading-relaxed font-light">{point.title}</p>
@@ -60,29 +61,44 @@ const TrustAndFinalCTA: React.FC = () => {
             </div>
 
             {/* Final CTA Section */}
-            <div className="py-40 relative overflow-hidden">
-                {/* Background Image with Blending */}
+            <div className="section-padding bg-brand-navy relative overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                    <img src={boardroomImage} alt="" className="w-full h-full object-cover opacity-65" />
-                    <div className="absolute inset-0 bg-linear-to-b from-brand-navy/80 via-brand-navy/30 to-brand-navy/80" />
+                    <Image
+                        src={boardroomImage}
+                        alt=""
+                        fill
+                        className="object-cover opacity-30 grayscale blur-[2px]"
+                    />
+                    <div className="absolute inset-0 bg-radial-at-c from-transparent via-brand-navy/60 to-brand-navy" />
+                    <div className="absolute inset-0 bg-linear-to-b from-brand-navy via-transparent to-brand-navy" />
                 </div>
 
-                <div className="max-w-300 mx-auto px-6 text-center relative z-10">
-                    <h2 className="text-4xl md:text-6xl font-technical mb-10 text-white leading-[1.1] max-w-4xl mx-auto">
-                        What decision are you actually being asked to make?
-                    </h2>
-                    <p className="text-white/50 text-xl font-light leading-relaxed max-w-2xl mx-auto mb-16">
-                        When that question feels harder than it should, clarity is already being compromised.
-                    </p>
+                <div className="absolute inset-0 opacity-10 z-0">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] bg-brand-gold/10 blur-[200px] rounded-full" />
+                </div>
 
-                    <div className="flex flex-col items-center gap-8">
-                        <Button href="/contact" variant="primary" size="lg" icon={ArrowRight}>
-                            Request a Private Clarity Conversation
-                        </Button>
-                        <div className="space-y-2">
-                            <p className="text-white/40 text-sm">
-                                A professional exchange between peers. Not a sales discussion.
-                            </p>
+                <div className="container-editorial relative z-10 text-center">
+                    <div className="max-w-5xl mx-auto">
+                        <h2 className="lg:text-7xl mb-16 leading-tight">
+                            What decision are you<br />actually being asked to make?
+                        </h2>
+
+                        <p className="mb-20 max-w-4xl mx-auto italic font-cinzel opacity-90 text-2xl">
+                            When that question feels harder than it should, clarity is already being compromised.
+                            That is usually the moment FalconBridge Partners is engaged.
+                        </p>
+
+                        <div className="flex flex-col items-center gap-10">
+                            <Button href="/contact" variant="primary" size="lg">
+                                Request a Private Clarity Conversation
+                            </Button>
+                            <div className="flex items-center gap-6 opacity-40">
+                                <div className="accent-divider" />
+                                <p className="label-tech lowercase tracking-widest whitespace-nowrap">
+                                    A professional exchange between peers. Not a sales discussion.
+                                </p>
+                                <div className="accent-divider" />
+                            </div>
                         </div>
                     </div>
                 </div>

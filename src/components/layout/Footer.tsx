@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Image from 'next/image';
 import { Mail, MapPin, Phone, Linkedin } from 'lucide-react';
 import logo from '@/assets/logos/logo.png';
 
@@ -18,8 +19,8 @@ const Footer: React.FC = () => {
             <div className="max-w-300 mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
                     <div className="lg:col-span-2">
-                        <Link to="/" className="inline-block mb-8">
-                            <img src={logo} alt="FalconBridge Partners" className="h-14 w-auto" />
+                        <Link href="/" className="inline-block mb-8">
+                            <Image src={logo} alt="FalconBridge Partners" className="h-14 w-auto" />
                         </Link>
                         <p className="text-white/40 max-w-sm font-light leading-relaxed mb-10 text-sm">
                             A private strategic partnership providing boardroom clarity and
@@ -45,9 +46,9 @@ const Footer: React.FC = () => {
                     <div>
                         <h4 className="font-technical text-sm uppercase tracking-widest mb-8 text-brand-gold">The Firm</h4>
                         <ul className="space-y-4">
-                            <li><Link to="/about" className="text-white/50 hover:text-white transition-colors text-sm">Philosophy</Link></li>
-                            <li><Link to="/founders" className="text-white/50 hover:text-white transition-colors text-sm">Founders</Link></li>
-                            <li><Link to="/research" className="text-white/50 hover:text-white transition-colors text-sm">Research Library</Link></li>
+                            <li><Link href="/about" className="text-white/50 hover:text-white transition-colors text-sm">Philosophy</Link></li>
+                            <li><Link href="/founders" className="text-white/50 hover:text-white transition-colors text-sm">Founders</Link></li>
+                            <li><Link href="/research" className="text-white/50 hover:text-white transition-colors text-sm">Research Library</Link></li>
                             <li><a href="#" className="text-white/50 hover:text-white transition-colors text-sm">Privacy Policy</a></li>
                             <li><a href="#" className="text-white/50 hover:text-white transition-colors text-sm">Terms of Engagement</a></li>
                         </ul>
@@ -56,8 +57,8 @@ const Footer: React.FC = () => {
                     <div>
                         <h4 className="font-technical text-sm uppercase tracking-widest mb-8 text-brand-gold">Engagement</h4>
                         <ul className="space-y-4">
-                            <li><Link to="/contact" className="text-white/50 hover:text-white transition-colors text-sm">Request Conversation</Link></li>
-                            <li><Link to="/how-we-work" className="text-white/50 hover:text-white transition-colors text-sm">How We Work</Link></li>
+                            <li><Link href="/contact" className="text-white/50 hover:text-white transition-colors text-sm">Request Conversation</Link></li>
+                            <li><Link href="/how-we-work" className="text-white/50 hover:text-white transition-colors text-sm">How We Work</Link></li>
                         </ul>
                     </div>
                 </div>

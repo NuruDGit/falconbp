@@ -1,5 +1,8 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
@@ -23,25 +26,25 @@ const Navbar: React.FC = () => {
         )}>
             <div className="max-w-300 mx-auto px-6 flex justify-between items-center">
                 <div className="nav-brand">
-                    <Link to="/" className="flex items-center gap-3">
-                        <img src={logo} alt="FalconBridge Partners" className="h-12 w-auto" />
+                    <Link href="/" className="flex items-center gap-3">
+                        <Image src={logo} alt="FalconBridge Partners" className="h-12 w-auto" />
                     </Link>
                 </div>
 
                 <div className="hidden md:flex items-center bg-white/3 border border-white/8 backdrop-blur-xl p-1.5 rounded-full">
                     <ul className="flex items-center gap-2 list-none">
                         <li>
-                            <Link to="/how-we-work" className="text-[0.8rem] font-medium text-white/70 px-5 py-2.5 rounded-full hover:text-white hover:bg-white/5 transition-all">
+                            <Link href="/how-we-work" className="text-[0.8rem] font-medium text-white/70 px-5 py-2.5 rounded-full hover:text-white hover:bg-white/5 transition-all">
                                 How We Work
                             </Link>
                         </li>
                         <li>
-                            <Link to="/research" className="text-[0.8rem] font-medium text-white/70 px-5 py-2.5 rounded-full hover:text-white hover:bg-white/5 transition-all">
+                            <Link href="/research" className="text-[0.8rem] font-medium text-white/70 px-5 py-2.5 rounded-full hover:text-white hover:bg-white/5 transition-all">
                                 Research
                             </Link>
                         </li>
                         <li>
-                            <Link to="/about" className="text-[0.8rem] font-medium text-white/70 px-5 py-2.5 rounded-full hover:text-white hover:bg-white/5 transition-all">
+                            <Link href="/about" className="text-[0.8rem] font-medium text-white/70 px-5 py-2.5 rounded-full hover:text-white hover:bg-white/5 transition-all">
                                 About
                             </Link>
                         </li>

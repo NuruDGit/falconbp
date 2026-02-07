@@ -2,11 +2,41 @@
 
 @theme {
   --color-brand-navy: #151c2f;
+  --color-brand-navy-dark: #010614;
   --color-brand-gold: #c7a975;
   --color-brand-grey: #c5c6cb;
 
   --font-technical: "IBM Plex Sans", "monospace";
   --font-primary: "Inter", "system-ui", "-apple-system", "sans-serif";
+  --font-cinzel: "Cinzel", "serif";
+
+  --spacing-section: clamp(6rem, 10vh, 12rem);
+  --spacing-gutter: clamp(3rem, 5vh, 6rem);
+
+  --animate-fade-in: fade-in 1s ease-out forwards;
+  --animate-fade-in-up: fade-in-up 1s ease-out forwards;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 @layer base {
@@ -15,17 +45,44 @@
     line-height: 1.65;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-technical font-medium text-white tracking-tight;
+  h1 {
+    @apply text-5xl md:text-7xl font-technical tracking-tighter leading-[1.1] text-white;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl font-technical tracking-tight leading-[1.2] text-white;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-cinzel italic text-brand-gold opacity-90;
+  }
+
+  p {
+    @apply text-base md:text-lg font-primary font-light leading-relaxed text-brand-grey;
   }
 }
 
 @layer utilities {
+  .container-editorial {
+    @apply max-w-[1280px] mx-auto px-6 md:px-12 w-full;
+  }
+
+  .section-padding {
+    @apply py-section;
+  }
+
+  .frosted-glass {
+    @apply backdrop-blur-xl bg-white/[0.015] border border-white/5;
+  }
+
+  .label-tech {
+    @apply text-[0.6rem] font-technical uppercase tracking-[0.4em] text-brand-gold opacity-60;
+  }
+
+  .accent-divider {
+    @apply h-px flex-1 bg-white/5;
+  }
+
   .grain-overlay {
     position: fixed;
     top: 0;
