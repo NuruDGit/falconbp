@@ -12,9 +12,9 @@ module.exports = {
                 'brand-grey': '#C5C6CB',
             },
             fontFamily: {
-                technical: ['"IBM Plex Sans"', 'sans-serif'],
-                primary: ['Inter', 'sans-serif'],
-                cinzel: ['Cinzel', 'serif'],
+                technical: ['var(--font-technical)', 'sans-serif'],
+                primary: ['var(--font-primary)', 'sans-serif'],
+                cinzel: ['var(--font-cinzel)', 'serif'],
             },
             spacing: {
                 'section': 'clamp(6rem, 10vh, 12rem)',
