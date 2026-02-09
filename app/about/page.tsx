@@ -20,9 +20,9 @@ export default function AboutPage() {
                     <div className="absolute inset-0 bg-linear-to-r from-brand-navy via-transparent to-brand-navy opacity-80" />
                 </div>
 
-                <div className="container-editorial relative z-10">
-                    <div className="max-w-4xl">
-                        <span className="label-tech mb-6">ABOUT US</span>
+                <div className="container-editorial relative z-10 text-center">
+                    <div className="max-w-4xl mx-auto">
+                        <span className="label-tech mb-6 inline-block">ABOUT US</span>
                         <h1 className="mb-8">A firm built for consequence.</h1>
                         <p className="text-xl md:text-2xl font-light leading-relaxed">
                             FalconBridge Partners was founded to support leaders at moments that define their next

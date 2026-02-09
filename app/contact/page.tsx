@@ -27,7 +27,7 @@ export default function ContactPage() {
 
     return (
         <div className="min-h-screen bg-brand-navy">
-            <div className="section-padding">
+            <div className="pt-48 pb-24">
                 <div className="container-editorial">
                     <div className="mb-24 text-center">
                         <span className="label-tech mb-4">GET IN TOUCH</span>

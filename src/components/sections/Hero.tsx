@@ -24,11 +24,17 @@ const Hero: React.FC = () => {
                         FalconBridge Partners supports CEOs and founders at moments where decisions carry real consequence and responsibility cannot be delegated.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row items-center gap-6 animate-fade-in-up [animation-delay:0.4s]">
-                        <Button href="/contact" variant="primary" size="lg" icon={ArrowRight} className="min-w-50">
+                    <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 animate-fade-in-up [animation-delay:0.4s] w-full sm:w-auto">
+                        <Button
+                            href="/contact"
+                            variant="primary"
+                            size="md"
+                            icon={ArrowRight}
+                            className="w-full sm:w-auto max-w-md text-center"
+                        >
                             Request a Confidential Conversation
                         </Button>
-                        <Button href="/ways-we-work" variant="ghost" size="md" icon={ArrowRight}>
+                        <Button href="/how-we-work" variant="ghost" size="md" icon={ArrowRight} className="w-full sm:w-auto max-w-md text-center">
                             How We Work
                         </Button>
                     </div>

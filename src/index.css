@@ -10,7 +10,7 @@
   --font-primary: "Inter", "system-ui", "-apple-system", "sans-serif";
   --font-cinzel: "Cinzel", "serif";
 
-  --spacing-section: clamp(6rem, 10vh, 12rem);
+  --spacing-section: clamp(4rem, 8vh, 10rem);
   --spacing-gutter: clamp(3rem, 5vh, 6rem);
 
   --animate-fade-in: fade-in 1s ease-out forwards;
