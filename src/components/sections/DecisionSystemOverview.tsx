@@ -10,7 +10,7 @@ const DecisionSystemOverview: React.FC = () => {
                     <div>
                         <span className="label-tech mb-8">THE DECISION SYSTEM</span>
                         <h2 className="mb-10">
-                            The FalconBridge<br />Decision System™
+                            The FalconBridge<br className="hidden md:block" />{" "}Decision System™
                         </h2>
                         <div className="space-y-8 max-w-xl">
                             <p>

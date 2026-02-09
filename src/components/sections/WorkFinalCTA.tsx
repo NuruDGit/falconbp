@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import boardroomBg from '@/assets/images/falcon-bridge-boardroom.png';
 
@@ -27,7 +28,7 @@ const WorkFinalCTA: React.FC = () => {
             <div className="container-editorial relative z-10 text-center">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="lg:text-7xl mb-16 leading-tight">
-                        What decision are you<br />actually being asked to make?
+                        What decision are you<br className="hidden md:block" />{" "}actually being asked to make?
                     </h2>
 
                     <p className="mb-20 max-w-4xl mx-auto italic font-cinzel opacity-90 text-2xl">
@@ -36,8 +37,8 @@ const WorkFinalCTA: React.FC = () => {
                     </p>
 
                     <div className="flex flex-col items-center gap-10">
-                        <Button href="/contact" variant="primary" size="lg">
-                            Request a confidential conversation
+                        <Button href="/contact" variant="primary" size="lg" icon={ArrowRight}>
+                            Book A Clarity Call
                         </Button>
                         <div className="flex items-center gap-6 opacity-40">
                             <div className="accent-divider" />

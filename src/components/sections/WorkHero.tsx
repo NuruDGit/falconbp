@@ -22,7 +22,7 @@ const WorkHero: React.FC = () => {
                 <div className="max-w-4xl mx-auto relative z-10">
                     <span className="text-brand-gold font-technical text-[0.6rem] tracking-[0.4em] uppercase mb-10 block opacity-80">HOW WE WORK</span>
                     <h1 className="text-5xl md:text-7xl font-technical mb-12 leading-[1.1] tracking-tight">
-                        <span className="text-white">Decision-led,</span><br />
+                        <span className="text-white">Decision-led,</span><br className="hidden md:block" />{" "}
                         <span className="text-brand-gold italic font-cinzel opacity-90">not topic-led.</span>
                     </h1>
                     <div className="max-w-3xl mx-auto">

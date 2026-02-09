@@ -27,7 +27,7 @@ const Confidentiality: React.FC = () => {
                     <span className="label-tech mb-4">FOUNDATION OF TRUST</span>
                     <h2 className="mb-4">
                         Confidentiality is not a feature.
-                        <br />
+                        <br className="hidden md:block" />{" "}
                         <span className="text-brand-gold italic font-cinzel opacity-90">It is the foundation.</span>
                     </h2>
                     <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed max-w-3xl">

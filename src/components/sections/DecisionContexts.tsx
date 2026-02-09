@@ -30,7 +30,7 @@ const DecisionContexts: React.FC = () => {
             <div className="max-w-300 mx-auto px-6">
                 <div className="mb-20 max-w-3xl">
                     <h2 className="text-4xl md:text-5xl font-technical mb-8 leading-tight">
-                        Built for leaders who<br />
+                        Built for leaders who<br className="hidden md:block" />{" "}
                         <span className="text-brand-gold italic font-light">cannot delegate responsibility.</span>
                     </h2>
                     <p className="text-white/60 text-xl font-light leading-relaxed">

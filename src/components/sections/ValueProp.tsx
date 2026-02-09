@@ -45,7 +45,7 @@ const ValueProp: React.FC = () => {
                 <div className="max-w-3xl mb-20">
                     <span className="label-tech mb-4">THE EDGE</span>
                     <h2 className="mb-6">
-                        Designed for decisions that<br />
+                        Designed for decisions that<br className="hidden md:block" />{" "}
                         <span className="text-brand-gold italic font-cinzel opacity-90">cannot afford mistakes.</span>
                     </h2>
                 </div>

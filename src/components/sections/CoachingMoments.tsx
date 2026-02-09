@@ -26,7 +26,7 @@ const CoachingMoments: React.FC = () => {
                     <div className="lg:sticky lg:top-40 max-w-xl">
                         <span className="label-tech mb-6">COACHING</span>
                         <h2 className="mb-6">
-                            Internal judgement<br />
+                            Internal judgement<br className="hidden md:block" />{" "}
                             <span className="text-brand-gold italic font-cinzel opacity-90">in the room.</span>
                         </h2>
                         <div className="space-y-6 max-w-lg">

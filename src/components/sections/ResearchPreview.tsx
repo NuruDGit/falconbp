@@ -170,7 +170,7 @@ const ResearchPreview: React.FC = () => {
                                     </div>
                                     <div className="flex-1">
                                         <h3 id="research-access-title" className="mb-2">
-                                            Request access to<br />
+                                            Request access to<br className="hidden md:block" />{" "}
                                             <span className="text-brand-gold italic font-cinzel opacity-90">sample research</span>
                                         </h3>
                                         <p className="text-sm">

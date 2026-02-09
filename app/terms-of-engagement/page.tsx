@@ -23,7 +23,7 @@ export default function TermsOfEngagementPage() {
                         TERMS OF ENGAGEMENT
                     </span>
                     <h1 className="text-5xl md:text-7xl font-technical mb-12 leading-[1.1] tracking-tight">
-                        <span className="text-white">Engagement</span><br />
+                        <span className="text-white">Engagement</span><br className="hidden md:block" />{" "}
                         <span className="text-brand-gold italic font-cinzel opacity-90">and boundaries.</span>
                     </h1>
                     <div className="max-w-3xl mx-auto">

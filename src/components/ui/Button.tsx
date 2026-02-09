@@ -37,9 +37,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         };
 
         const sizes = {
-            sm: "px-6 py-3 text-xs",
-            md: "px-10 py-5 text-sm",
-            lg: "px-12 py-6 text-base"
+            sm: "px-5 py-2.5 text-[0.65rem] md:px-6 md:py-3 md:text-xs",
+            md: "px-6 py-3.5 text-xs md:px-10 md:py-5 md:text-sm",
+            lg: "px-7 py-4 text-sm md:px-12 md:py-6 md:text-base"
         };
 
         const iconStyles = iconPosition === 'right' 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import goldenLine from '@/assets/images/golden_line_in_the_dark_sky.png';
 
@@ -35,7 +35,7 @@ const EngagementFlow: React.FC = () => {
                     <div className="lg:col-span-7 h-fit">
                         <span className="label-tech mb-8">ENGAGEMENT FLOW</span>
                         <h2 className="mb-10 lg:text-5xl leading-tight">
-                            How engagements<br />typically unfold.
+                            How engagements<br className="hidden md:block" />{" "}typically unfold.
                         </h2>
                         <p className="max-w-md">
                             Each engagement is structured to protect the decision-maker while exposing
@@ -49,8 +49,8 @@ const EngagementFlow: React.FC = () => {
                             <p className="text-white/60 text-sm leading-relaxed mb-8">
                                 A disciplined cadence that moves from clarity to commitment without diluting authority.
                             </p>
-                            <Button href="/contact" variant="primary" size="md" icon={ArrowUpRight}>
-                                Request conversation
+                            <Button href="/contact" variant="primary" size="md" icon={ArrowRight}>
+                                Book A Clarity Call
                             </Button>
                         </div>
                     </div>

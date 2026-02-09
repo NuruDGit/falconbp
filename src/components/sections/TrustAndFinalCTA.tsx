@@ -32,7 +32,7 @@ const TrustAndFinalCTA: React.FC = () => {
                         <span className="text-[0.7rem] font-technical text-brand-gold uppercase tracking-[0.25em]">Foundation of Trust</span>
                         <h2 className="text-4xl md:text-5xl font-technical text-white leading-tight max-w-4xl">
                             Confidentiality is not a feature.
-                            <br />
+                            <br className="hidden md:block" />{" "}
                             <span className="text-brand-gold italic font-light">It is the foundation.</span>
                         </h2>
                         <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed max-w-3xl">
@@ -80,7 +80,7 @@ const TrustAndFinalCTA: React.FC = () => {
                 <div className="container-editorial relative z-10 text-center">
                     <div className="max-w-5xl mx-auto">
                         <h2 className="lg:text-7xl mb-16 leading-tight">
-                            What decision are you<br />actually being asked to make?
+                            What decision are you<br className="hidden md:block" />{" "}actually being asked to make?
                         </h2>
 
                         <p className="mb-20 max-w-4xl mx-auto italic font-cinzel opacity-90 text-2xl">
@@ -89,8 +89,8 @@ const TrustAndFinalCTA: React.FC = () => {
                         </p>
 
                         <div className="flex flex-col items-center gap-10">
-                            <Button href="/contact" variant="primary" size="lg">
-                                Request a Private Clarity Conversation
+                            <Button href="/contact" variant="primary" size="lg" icon={ArrowRight}>
+                                Book A Clarity Call
                             </Button>
                             <div className="flex items-center gap-6 opacity-40">
                                 <div className="accent-divider" />

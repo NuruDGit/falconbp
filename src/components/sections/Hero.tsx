@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
             <div className="max-w-300 mx-auto px-6 w-full relative z-10">
                 <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
                     <h1 className="font-technical text-[clamp(2.5rem,7vw,6rem)] leading-[1.05] text-white font-medium tracking-tight mb-10 animate-fade-in-up">
-                        Sharper thinking when<br />
+                        Sharper thinking when<br className="hidden md:block" />{" "}
                         <span className="text-brand-gold font-technical italic font-normal">the decision stays with you.</span>
                     </h1>
 
@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
                             icon={ArrowRight}
                             className="w-full sm:w-auto max-w-md text-center"
                         >
-                            Request a Confidential Conversation
+                            Book A Clarity Call
                         </Button>
                         <Button href="/how-we-work" variant="ghost" size="md" icon={ArrowRight} className="w-full sm:w-auto max-w-md text-center">
                             How We Work

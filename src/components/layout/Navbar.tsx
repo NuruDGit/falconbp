@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
-import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { ArrowRight, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import logo from '@/assets/logos/logo.png';
 
@@ -31,9 +31,14 @@ const Navbar: React.FC = () => {
     return (
         <nav className={cn(
             "fixed top-0 left-0 w-full z-1000 transition-all duration-500",
-            scrolled ? "py-4 bg-brand-navy/95 backdrop-blur-xl shadow-lg shadow-black/20" : "py-8 bg-transparent"
+            scrolled ? "py-4" : "py-8"
         )}>
-            <div className="max-w-300 mx-auto px-6 flex justify-between items-center">
+            <div className={cn(
+                "mx-auto px-6 flex justify-between items-center transition-all duration-500",
+                scrolled
+                    ? "max-w-[1200px] bg-white/5 border border-white/10 backdrop-blur-xl rounded-full shadow-lg shadow-black/20 px-6 py-3"
+                    : "max-w-300"
+            )}>
                 <div className="nav-brand">
                     <Link href="/" className="flex items-center gap-3">
                         <Image src={logo} alt="FalconBridge Partners" className="h-12 w-auto" />
@@ -67,8 +72,8 @@ const Navbar: React.FC = () => {
                             </Link>
                         </li>
                         <li>
-                            <Button href="/contact" variant="primary" size="sm" icon={ArrowUpRight}>
-                                Request Conversation
+                            <Button href="/contact" variant="primary" size="sm" icon={ArrowRight}>
+                                Book A Clarity Call
                             </Button>
                         </li>
                     </ul>
@@ -96,8 +101,8 @@ const Navbar: React.FC = () => {
                         <Link href="/about" onClick={() => setMenuOpen(false)} className="block text-white/80 text-sm font-technical uppercase tracking-widest">
                             About
                         </Link>
-                        <Button href="/contact" variant="primary" size="sm" icon={ArrowUpRight} className="w-full justify-center" onClick={() => setMenuOpen(false)}>
-                            Request Conversation
+                        <Button href="/contact" variant="primary" size="sm" icon={ArrowRight} className="w-full justify-center" onClick={() => setMenuOpen(false)}>
+                            Book A Clarity Call
                         </Button>
                     </div>
                 </div>

@@ -31,7 +31,7 @@ const ClarityFramework: React.FC = () => {
             <div className="max-w-300 mx-auto px-6">
                 <div className="flex flex-col items-center mb-16 text-center">
                     <span className="text-brand-gold font-technical text-sm tracking-widest uppercase mb-4">THE DECISION SYSTEM</span>
-                    <h2 className="text-4xl md:text-5xl font-technical mb-8">Three dimensions of clarity.<br />One anchored decision.</h2>
+                    <h2 className="text-4xl md:text-5xl font-technical mb-8">Three dimensions of clarity.<br className="hidden md:block" />{" "}One anchored decision.</h2>
                     <p className="text-white/60 text-lg max-w-2xl font-light leading-relaxed">
                         We integrate internal judgement, external signal, and execution reality to preserve authority while improving judgement.
                     </p>

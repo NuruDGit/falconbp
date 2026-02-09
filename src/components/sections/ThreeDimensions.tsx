@@ -46,7 +46,7 @@ const ThreeDimensions: React.FC = () => {
                 <div className="mb-24 text-center">
                     <span className="label-tech mb-8 inline-block">THE SYSTEM IN PRACTICE</span>
                     <h2 className="mb-10 lg:text-[4rem]">
-                        Three dimensions that shape<br />
+                        Three dimensions that shape<br className="hidden md:block" />{" "}
                         <span className="text-brand-gold italic font-cinzel opacity-90">every real decision.</span>
                     </h2>
                     <p className="max-w-3xl mx-auto">
