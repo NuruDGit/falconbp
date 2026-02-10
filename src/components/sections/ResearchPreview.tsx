@@ -88,7 +88,7 @@ const ResearchPreview: React.FC = () => {
                         <span className="label-tech mb-4">EXTERNAL SIGNAL</span>
                         <h2 className="mb-8">Decision-led research.</h2>
                         <p className="mb-10">
-                            We begin with the decision frame, define what must be known, and deliver insight that can be used at the point of commitment.
+                            We begin with the decision frame, define what must be known and deliver insight that can be used at the point of commitment.
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
@@ -297,3 +297,4 @@ const ResearchPreview: React.FC = () => {
 };
 
 export default ResearchPreview;
+

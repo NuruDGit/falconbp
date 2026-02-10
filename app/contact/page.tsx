@@ -71,7 +71,7 @@ const ContactPage: React.FC = () => {
                         <span className="text-brand-gold italic font-cinzel opacity-90">being asked to make?</span>
                     </h1>
                     <p className="text-lg md:text-2xl font-light leading-relaxed max-w-3xl mx-auto text-white/70">
-                        We work with founders, CEOs, and investors facing decisions with real consequence. If the
+                        We work with founders, CEOs and investors facing decisions with real consequence. If the
                         decision is active and the stakes are high, we can help.
                     </p>
                 </div>
@@ -193,3 +193,4 @@ const ContactPage: React.FC = () => {
 };
 
 export default ContactPage;
+

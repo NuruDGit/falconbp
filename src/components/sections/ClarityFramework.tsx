@@ -7,7 +7,7 @@ const pillars = [
         icon: Target,
         title: "Internal Judgement",
         subtitle: "Decision-bound coaching",
-        desc: "Clarify assumptions, trade-offs, and internal noise so the decision can be made deliberately and owned fully."
+        desc: "Clarify assumptions, trade-offs and internal noise so the decision can be made deliberately and owned fully."
     },
     {
         id: "external",
@@ -33,7 +33,7 @@ const ClarityFramework: React.FC = () => {
                     <span className="text-brand-gold font-technical text-sm tracking-widest uppercase mb-4">THE DECISION SYSTEM</span>
                     <h2 className="text-4xl md:text-5xl font-technical mb-8">Three dimensions of clarity.<br className="hidden md:block" />{" "}One anchored decision.</h2>
                     <p className="text-white/60 text-lg max-w-2xl font-light leading-relaxed">
-                        We integrate internal judgement, external signal, and execution reality to preserve authority while improving judgement.
+                        We integrate internal judgement, external signal and execution reality to preserve authority while improving judgement.
                     </p>
                 </div>
 
@@ -63,3 +63,4 @@ const ClarityFramework: React.FC = () => {
 
 
 export default ClarityFramework;
+

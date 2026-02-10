@@ -3,8 +3,8 @@ import React from 'react';
 const moments = [
     {
         id: "I",
-        label: "Pre-research decision clarity",
-        desc: "Clarify the decision question before any research is commissioned, define constraints, and isolate what truly needs to be decided."
+        label: "Pre-research question clarity",
+        desc: "Clarify the question before any research is commissioned, define constraints and isolate what truly needs to be decided."
     },
     {
         id: "II",
@@ -31,10 +31,10 @@ const CoachingMoments: React.FC = () => {
                         </h2>
                         <div className="space-y-6 max-w-lg">
                             <p>
-                                Decisions are shaped by experience, incentives, and consequence. We surface those forces before and after research so the final call is grounded in reality.
+                                Decisions are shaped by experience, incentives and consequence. We surface those forces before and after research so the final call is grounded in reality.
                             </p>
                             <p className="text-white/70">
-                                These are the decision moments where the three dimensions are tested, aligned, and made operational.
+                                These are the decision moments where the three dimensions are tested, aligned and made operational.
                             </p>
                             <div className="pt-4">
                                 <p className="text-brand-gold italic font-cinzel text-xl md:text-2xl opacity-90">
@@ -64,3 +64,4 @@ const CoachingMoments: React.FC = () => {
 };
 
 export default CoachingMoments;
+

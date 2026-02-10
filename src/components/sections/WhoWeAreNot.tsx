@@ -61,7 +61,7 @@ const WhoWeAreNot: React.FC = () => {
                             </h3>
 
                             <p className="text-white/70 mb-10 max-w-md">
-                                We inform, challenge, and support decision-makers while preserving authority and accountability.
+                                We inform, challenge and support decision-makers while preserving authority and accountability.
                             </p>
 
                             <ul className="space-y-6">
@@ -85,3 +85,4 @@ const WhoWeAreNot: React.FC = () => {
 };
 
 export default WhoWeAreNot;
+

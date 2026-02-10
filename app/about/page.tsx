@@ -23,10 +23,10 @@ export default function AboutPage() {
                 <div className="container-editorial relative z-10 text-center">
                     <div className="max-w-4xl mx-auto">
                         <span className="label-tech mb-6 inline-block">ABOUT US</span>
-                        <h1 className="mb-8">A firm built for consequence.</h1>
+                        <h1 className="mb-8">A partnership built for consequence.</h1>
                         <p className="text-xl md:text-2xl font-light leading-relaxed">
                             FalconBridge Partners was founded to support leaders at moments that define their next
-                            stage of growth, when capital is committed, timing matters, and responsibility cannot be
+                            stage of growth, when capital is committed, timing matters and responsibility cannot be
                             delegated.
                         </p>
                     </div>
@@ -35,8 +35,8 @@ export default function AboutPage() {
                         <div className="lg:col-span-7 frosted-glass rounded-[2.5rem] p-10 md:p-12 hover:border-brand-gold/25 transition-all duration-700">
                             <span className="label-tech mb-6 text-brand-gold">Our Purpose</span>
                             <p className="text-lg md:text-xl font-light leading-relaxed text-white/70">
-                                We operate quietly. There is no performance, no theatre, and no unnecessary process.
-                                Conversations are direct, respectful, and grounded in consequence.
+                                We operate quietly. There is no performance, no theatre and no unnecessary process.
+                                Conversations are direct, respectful and grounded in consequence.
                             </p>
                         </div>
                         <div className="lg:col-span-5 frosted-glass rounded-[2.5rem] p-10 md:p-12 hover:border-brand-gold/25 transition-all duration-700">
@@ -52,7 +52,7 @@ export default function AboutPage() {
                         <div className="lg:col-span-4 frosted-glass rounded-[2.5rem] p-10 md:p-12 hover:border-brand-gold/25 transition-all duration-700">
                             <span className="label-tech mb-6 text-brand-gold">The Work</span>
                             <p className="text-white/60 text-base md:text-lg font-light leading-relaxed">
-                                We integrate internal judgement, external signal, and execution reality around a
+                                We integrate internal judgement, external signal and execution reality around a
                                 specific decision. This work is delivered through the FalconBridge Decision System (TM).
                             </p>
                         </div>
@@ -60,7 +60,7 @@ export default function AboutPage() {
                             <span className="label-tech mb-6 text-brand-gold">Where We Operate</span>
                             <p className="text-white/60 text-base md:text-lg font-light leading-relaxed">
                                 We are built for environments where reputational risk is real, decision cycles are
-                                compressed, and the cost of indecision becomes irreversible.
+                                compressed and the cost of indecision becomes irreversible.
                             </p>
                         </div>
                         <div className="lg:col-span-4 frosted-glass rounded-[2.5rem] p-10 md:p-12 hover:border-brand-gold/25 transition-all duration-700">
@@ -112,9 +112,9 @@ export default function AboutPage() {
                                         <p className="label-tech text-brand-gold">Co-Founder &amp; Managing Partner</p>
                                     </div>
                                     <p className="text-white/70 font-light leading-relaxed">
-                                        Joel brings more than two decades of leadership, coaching, and advisory experience
+                                        Joel brings more than two decades of leadership, coaching and advisory experience
                                         across complex environments. His work focuses on sharpening judgement under pressure,
-                                        reducing distortion, and creating decision clarity that leaders can own.
+                                        reducing distortion and creating decision clarity that leaders can own.
                                     </p>
                                     <p className="text-white/60 font-light leading-relaxed">
                                         He operates at the intersection of human insight and structured analysis, helping
@@ -122,13 +122,13 @@ export default function AboutPage() {
                                     </p>
                                     <p className="text-white/60 font-light leading-relaxed">
                                         The work is practical and decision-bound, designed to stabilise clarity, surface
-                                        trade-offs, and protect ownership when pressure threatens coherence.
+                                        trade-offs and protect ownership when pressure threatens coherence.
                                     </p>
                                     <div className="flex gap-3 pt-2">
-                                        <a href="#" className="p-2.5 bg-white/10 border border-white/15 rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300">
+                                        <a href="https://www.linkedin.com/in/joelarcus/" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-white/10 border border-white/15 rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300">
                                             <Linkedin className="w-4.5 h-4.5" />
                                         </a>
-                                        <a href="#" className="p-2.5 bg-white/10 border border-white/15 rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300">
+                                        <a href="mailto:joel@falconbp.com" className="p-2.5 bg-white/10 border border-white/15 rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300">
                                             <Mail className="w-4.5 h-4.5" />
                                         </a>
                                     </div>
@@ -162,23 +162,23 @@ export default function AboutPage() {
                                         <p className="label-tech text-brand-gold">Co-Founder &amp; Research Partner</p>
                                     </div>
                                     <p className="text-white/70 font-light leading-relaxed">
-                                        Quincy brings deep international experience across finance, strategy, and private
+                                        Quincy brings deep international experience across finance, strategy and private
                                         capital. His focus is transforming complex external signal into decision-grade
                                         clarity that can be used at the point of commitment.
                                     </p>
                                     <p className="text-white/60 font-light leading-relaxed">
                                         He combines commercial acumen with rigorous diagnostic insight, ensuring research
-                                        is decision-led, restrained, and aligned to the authority of the leader.
+                                        is decision-led, restrained and aligned to the authority of the leader.
                                     </p>
                                     <p className="text-white/60 font-light leading-relaxed">
                                         The result is structured signal that clarifies options, exposes second-order effects,
                                         and strengthens decision ownership without replacing judgement.
                                     </p>
                                     <div className="flex gap-3 pt-2">
-                                        <a href="#" className="p-2.5 bg-white/10 border border-white/15 rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300">
+                                        <a href="https://www.linkedin.com/in/quincy-jc-beukes/" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-white/10 border border-white/15 rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300">
                                             <Linkedin className="w-4.5 h-4.5" />
                                         </a>
-                                        <a href="#" className="p-2.5 bg-white/10 border border-white/15 rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300">
+                                        <a href="mailto:quincy@falconbp.com" className="p-2.5 bg-white/10 border border-white/15 rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300">
                                             <Mail className="w-4.5 h-4.5" />
                                         </a>
                                     </div>
@@ -192,3 +192,4 @@ export default function AboutPage() {
         </div>
     );
 }
+

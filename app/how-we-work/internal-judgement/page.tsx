@@ -33,15 +33,15 @@ export default function InternalJudgementPage() {
                             <h2 className="mt-4">Internal judgement under pressure</h2>
                         </div>
                         <p>
-                            Internal judgement is influenced by logic and experience, and by pressure, identity, organisational dynamics, stakeholder expectations, personal history, and fear of consequence. At senior levels, these forces often operate quietly, shaping decisions without being examined directly.
+                            Internal judgement is influenced by logic and experience and by pressure, identity, organisational dynamics, stakeholder expectations, personal history and fear of consequence. At senior levels, these forces often operate quietly, shaping decisions without being examined directly.
                         </p>
                         <p>
-                            Within the FalconBridge Decision System, internal judgement is examined with intent and discipline. This is not introspection for its own sake, and it is not therapeutic work. It is practical clarity in service of a decision that must be made.
+                            Within the FalconBridge Decision System, internal judgement is examined with intent and discipline. This is not introspection for its own sake and it is not therapeutic work. It is practical clarity in service of a decision that must be made.
                         </p>
                     </div>
                     <div className="lg:col-span-6 space-y-6">
                         <p>
-                            We work with leaders to clarify what decision is actually being made, why it matters now, what success would look like, and what constraints are real rather than assumed. We surface assumptions treated as facts, identify trade-offs being avoided or deferred, and reduce cognitive and emotional noise that distorts clarity under pressure.
+                            We work with leaders to clarify what decision is actually being made, why it matters now, what success would look like and what constraints are real rather than assumed. We surface assumptions treated as facts, identify trade-offs being avoided or deferred and reduce cognitive and emotional noise that distorts clarity under pressure.
                         </p>
                         <div className="frosted-glass rounded-[2rem] p-8 md:p-10">
                             <p className="label-tech mb-6">THE AIM</p>
@@ -71,7 +71,7 @@ export default function InternalJudgementPage() {
                     </div>
                     <div className="lg:col-span-6 space-y-6">
                         <p>
-                            Coaching within FalconBridge is designed to do three things. First, it stabilises clarity when pressure distorts thinking. Second, it exposes internal conflict that blocks commitment. Third, it creates decisional ownership that can withstand scrutiny from boards, investors, and senior stakeholders.
+                            Coaching within FalconBridge is designed to do three things. First, it stabilises clarity when pressure distorts thinking. Second, it exposes internal conflict that blocks commitment. Third, it creates decisional ownership that can withstand scrutiny from boards, investors and senior stakeholders.
                         </p>
                         <div className="frosted-glass rounded-[2rem] p-8 md:p-10">
                             <p className="label-tech mb-6">OUTCOMES</p>
@@ -99,9 +99,9 @@ export default function InternalJudgementPage() {
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         <div className="frosted-glass rounded-3xl p-8">
-                            <h3 className="text-2xl font-technical mb-3">Pre-research decision clarity session</h3>
+                            <h3 className="text-2xl font-technical mb-3">Pre-research question clarity session</h3>
                             <p>
-                                This session clarifies the decision question before any research is commissioned. We isolate the decision, define the constraints, and articulate the question in a way that can guide research without expanding into noise.
+                                This session clarifies the question before any research is commissioned. We isolate the decision, define the constraints and articulate the question in a way that can guide research without expanding into noise.
                             </p>
                             <p className="mt-4 text-white/60">
                                 A leader leaves with a clear decision frame and a clean research brief direction, even if FalconBridge is not conducting the research.
@@ -110,7 +110,7 @@ export default function InternalJudgementPage() {
                         <div className="frosted-glass rounded-3xl p-8">
                             <h3 className="text-2xl font-technical mb-3">Post-research decision integration session</h3>
                             <p>
-                                This session is for after research or external insight is available, but clarity has not yet translated into commitment. We integrate the research with internal judgement and execution reality, pressure-test options, surface sources of hesitation, and reduce psychological noise.
+                                This session is for after research or external insight is available, but clarity has not yet translated into commitment. We integrate the research with internal judgement and execution reality, pressure-test options, surface sources of hesitation and reduce psychological noise.
                             </p>
                             <p className="mt-4 text-white/60">
                                 A leader leaves with a committed decision, a committed decision direction, or a precise statement of what must be resolved before commitment is responsible.
@@ -164,11 +164,11 @@ export default function InternalJudgementPage() {
                     </div>
                     <div className="lg:col-span-6 space-y-6">
                         <p>
-                            This protects quality, discretion, and the integrity of the coaching. It also ensures that the leader remains responsible for implementation and accountability, rather than outsourcing discipline to the coach.
+                            This protects quality, discretion and the integrity of the coaching. It also ensures that the leader remains responsible for implementation and accountability, rather than outsourcing discipline to the coach.
                         </p>
                         <div className="frosted-glass rounded-[2rem] p-8 md:p-10">
                             <p className="text-brand-gold italic font-cinzel text-xl opacity-90">
-                                The work is disciplined, time-bound, and decision-led.
+                                The work is disciplined, time-bound and decision-led.
                             </p>
                         </div>
                     </div>
@@ -180,3 +180,4 @@ export default function InternalJudgementPage() {
         </div>
     );
 }
+

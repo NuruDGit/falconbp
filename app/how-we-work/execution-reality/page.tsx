@@ -32,7 +32,7 @@ export default function ExecutionRealityPage() {
                             <h2 className="mt-4">Execution reality before commitment</h2>
                         </div>
                         <p>
-                            Many decisions appear sound in theory and fail in practice. Execution introduces timing constraints, organisational dynamics, cultural resistance, resource limitations, and unintended consequences that are easy to underestimate before commitment.
+                            Many decisions appear sound in theory and fail in practice. Execution introduces timing constraints, organisational dynamics, cultural resistance, resource limitations and unintended consequences that are easy to underestimate before commitment.
                         </p>
                     </div>
                     <div className="lg:col-span-6 space-y-6">
@@ -64,10 +64,10 @@ export default function ExecutionRealityPage() {
                     </div>
                     <div className="lg:col-span-6 space-y-6">
                         <p>
-                            FalconBridge deliberately examines downstream implications across execution, culture, capability, and stakeholder response. This is not an exercise in risk avoidance. It is an exercise in realism.
+                            FalconBridge deliberately examines downstream implications across execution, culture, capability and stakeholder response. This is not an exercise in risk avoidance. It is an exercise in realism.
                         </p>
                         <p>
-                            By surfacing these effects early, leaders are better positioned to decide with eyes open, allocate attention appropriately, and respond deliberately rather than reactively once execution begins.
+                            By surfacing these effects early, leaders are better positioned to decide with eyes open, allocate attention appropriately and respond deliberately rather than reactively once execution begins.
                         </p>
                         <div className="frosted-glass rounded-[2rem] p-8 md:p-10">
                             <p className="label-tech mb-6">IMPLICATIONS</p>
@@ -101,7 +101,7 @@ export default function ExecutionRealityPage() {
                             Some decisions fail because they are made too slowly and opportunity is lost. Others fail because they are made too quickly, before sufficient integration has occurred.
                         </p>
                         <p>
-                            Part of our role is to help leaders sense when to slow the process because clarity is degrading, and when to accelerate because alignment is sufficient and hesitation is creating unnecessary risk. This calibration of pace is a core element of the FalconBridge Decision System.
+                            Part of our role is to help leaders sense when to slow the process because clarity is degrading and when to accelerate because alignment is sufficient and hesitation is creating unnecessary risk. This calibration of pace is a core element of the FalconBridge Decision System.
                         </p>
                         <div className="frosted-glass rounded-[2rem] p-8 md:p-10">
                             <p className="text-brand-gold italic font-cinzel text-xl opacity-90">
@@ -118,12 +118,12 @@ export default function ExecutionRealityPage() {
                         <span className="label-tech">ADVISORY</span>
                         <h2>What FalconBridge advisory is</h2>
                         <p>
-                            FalconBridge advisory is not execution management. It is execution clarity. It supports leaders to maintain alignment, protect original intent, and respond to real-world pressure without reverting to reactive decision-making.
+                            FalconBridge advisory is not execution management. It is execution clarity. It supports leaders to maintain alignment, protect original intent and respond to real-world pressure without reverting to reactive decision-making.
                         </p>
                     </div>
                     <div className="lg:col-span-6 space-y-6">
                         <p>
-                            Advisory engagements can include structured decision follow-through, risk and consequence mapping during implementation, stakeholder alignment preparation, and decision integrity support when execution introduces distortion.
+                            Advisory engagements can include structured decision follow-through, risk and consequence mapping during implementation, stakeholder alignment preparation and decision integrity support when execution introduces distortion.
                         </p>
                         <p>
                             Authority remains with the leader. Advisory does not replace leadership.
@@ -150,3 +150,4 @@ export default function ExecutionRealityPage() {
         </div>
     );
 }
+

@@ -5,22 +5,22 @@ const contexts = [
     {
         icon: BarChart3,
         title: "Capital Allocation",
-        desc: "Decisions that shape capital deployment, risk tolerance, and long-term return."
+        desc: "Decisions that shape capital deployment, risk tolerance and long-term return."
     },
     {
         icon: Briefcase,
         title: "Strategic Direction",
-        desc: "Commitments that define market posture, growth trajectory, and competitive position."
+        desc: "Commitments that define market posture, growth trajectory and competitive position."
     },
     {
         icon: Gavel,
         title: "Leadership Credibility",
-        desc: "Moments where the decision itself affects authority, trust, and reputation."
+        desc: "Moments where the decision itself affects authority, trust and reputation."
     },
     {
         icon: ShieldCheck,
         title: "Timing & Execution Capacity",
-        desc: "Choices that cannot be delayed without cost, and cannot be rushed without consequence."
+        desc: "Choices that cannot be delayed without cost and cannot be rushed without consequence."
     }
 ];
 
@@ -58,3 +58,4 @@ const DecisionContexts: React.FC = () => {
 
 
 export default DecisionContexts;
+

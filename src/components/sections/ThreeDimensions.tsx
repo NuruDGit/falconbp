@@ -8,7 +8,7 @@ const dimensions = [
         title: "Internal Judgement",
         label: "COACHING WITHIN THE SYSTEM",
         href: "/how-we-work/internal-judgement",
-        mainText: "Internal judgement is examined with discipline so the decision-maker can see assumptions, trade-offs, and pressure distortions clearly.",
+        mainText: "Internal judgement is examined with discipline so the decision-maker can see assumptions, trade-offs and pressure distortions clearly.",
         focusAreas: [
             "Clarify what decision is actually being made",
             "Surface assumptions treated as facts",
@@ -34,7 +34,7 @@ const dimensions = [
         title: "Execution Reality",
         label: "ADVISORY WITHOUT AUTHORITY",
         href: "/how-we-work/execution-reality",
-        mainText: "Execution pressure is tested before decisions are locked in, and clarity is protected as action begins.",
+        mainText: "Execution pressure is tested before decisions are locked in and clarity is protected as action begins.",
         focusAreas: [
             "Test options against organisational reality",
             "Anticipate second-order consequences",
@@ -120,5 +120,6 @@ const ThreeDimensions: React.FC = () => {
 };
 
 export default ThreeDimensions;
+
 
 

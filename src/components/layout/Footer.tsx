@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, MapPin, Phone, Linkedin } from 'lucide-react';
+import { Mail, Phone, Linkedin } from 'lucide-react';
 import logo from '@/assets/logos/logo.png';
 
 const Footer: React.FC = () => {
@@ -25,28 +25,25 @@ const Footer: React.FC = () => {
                         <p className="text-white/40 max-w-sm font-light leading-relaxed mb-10 text-sm">
                             A private strategic partnership providing boardroom clarity and
                             intelligence-grade research for leaders in moments of consequence.
-                            Discreet, rigorous, and referral-only.
+                            Discreet, rigorous and referral-only.
                         </p>
                         <div className="flex gap-3">
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all">
+                            <a href="https://www.linkedin.com/company/falconbps" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all">
                                 <Linkedin className="w-4 h-4" />
                             </a>
-                            <a href="mailto:joel@falconbp.com" className="p-3 bg-white/5 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all">
+                            <a href="mailto:researchteam@falconbp.com" className="p-3 bg-white/5 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all">
                                 <Mail className="w-4 h-4" />
                             </a>
                             <a href="tel:+971527068408" className="p-3 bg-white/5 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all">
                                 <Phone className="w-4 h-4" />
                             </a>
-                            <a href="https://maps.google.com/?q=Amber+Gem+Tower+Sheikh+Khalifa+Street+Ajman+UAE" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all">
-                                <MapPin className="w-4 h-4" />
-                            </a>
                         </div>
                     </div>
 
                     <div>
-                        <h4 className="font-technical text-sm uppercase tracking-widest mb-8 text-brand-gold">The Firm</h4>
+                        <h4 className="font-technical text-sm uppercase tracking-widest mb-8 text-brand-gold">The Partnership</h4>
                         <ul className="space-y-4">
-                            <li><Link href="/about" className="text-white/50 hover:text-white transition-colors text-sm">Philosophy</Link></li>
+                            <li><Link href="/about" className="text-white/50 hover:text-white transition-colors text-sm">About Us</Link></li>
                             <li><Link href="/privacy-policy" className="text-white/50 hover:text-white transition-colors text-sm">Privacy Policy</Link></li>
                             <li><Link href="/terms-of-engagement" className="text-white/50 hover:text-white transition-colors text-sm">Terms of Engagement</Link></li>
                         </ul>
@@ -55,7 +52,7 @@ const Footer: React.FC = () => {
                     <div>
                         <h4 className="font-technical text-sm uppercase tracking-widest mb-8 text-brand-gold">Engagement</h4>
                         <ul className="space-y-4">
-                            <li><Link href="/contact" className="text-white/50 hover:text-white transition-colors text-sm">Request Conversation</Link></li>
+                            <li><Link href="/contact" className="text-white/50 hover:text-white transition-colors text-sm">Book a Clarity Call</Link></li>
                             <li><Link href="/how-we-work" className="text-white/50 hover:text-white transition-colors text-sm">How We Work</Link></li>
                         </ul>
                     </div>

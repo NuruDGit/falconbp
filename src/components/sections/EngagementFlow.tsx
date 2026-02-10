@@ -7,11 +7,11 @@ import goldenLine from '@/assets/images/golden_line_in_the_dark_sky.png';
 const EngagementFlow: React.FC = () => {
     const steps = [
         {
-            title: "Clarifying the decision",
+            title: "Clarifying the Question",
             desc: "Identifying the core question that requires resolution before movement is possible."
         },
         {
-            title: "Framing success, risk, and constraints",
+            title: "Framing success, risk and constraints",
             desc: "Mapping the boundaries of the decision to ensure all variables are visible."
         },
         {
@@ -24,7 +24,7 @@ const EngagementFlow: React.FC = () => {
         },
         {
             title: "Commitment and transition",
-            desc: "Moving from deliberation to ownership, ensuring a clean hand-off to execution."
+            desc: "Moving from deliberation to ownership ensuring a clean hand-off to execution."
         }
     ];
 

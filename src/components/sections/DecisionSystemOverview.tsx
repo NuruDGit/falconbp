@@ -14,11 +14,11 @@ const DecisionSystemOverview: React.FC = () => {
                         </h2>
                         <div className="space-y-8 max-w-xl">
                             <p>
-                                A disciplined approach designed for uncertainty, pressure, and
+                                A disciplined approach designed for uncertainty, pressure and
                                 incomplete information—without diluting authority.
                             </p>
                             <p>
-                                Internal judgement, external signal, and execution reality are bound
+                                Internal judgement, external signal and execution reality are bound
                                 together and kept anchored to the decision throughout
                                 the engagement.
                             </p>
@@ -49,3 +49,4 @@ const DecisionSystemOverview: React.FC = () => {
 };
 
 export default DecisionSystemOverview;
+

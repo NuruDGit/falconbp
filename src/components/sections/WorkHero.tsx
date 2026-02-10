@@ -28,9 +28,9 @@ const WorkHero: React.FC = () => {
                     <div className="max-w-3xl mx-auto">
                         <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed">
                             The work is anchored to a specific decision at all times—protecting clarity, constraining
-                            scope, and ensuring every conversation strengthens judgement. We do not take authority
+                            scope and ensuring every conversation strengthens judgement. We do not take authority
                             away from leaders. We make the thinking sharper so the decision can be owned,
-                            defended, and executed with confidence.
+                            defended and executed with confidence.
                         </p>
                     </div>
                 </div>
@@ -40,3 +40,4 @@ const WorkHero: React.FC = () => {
 };
 
 export default WorkHero;
+

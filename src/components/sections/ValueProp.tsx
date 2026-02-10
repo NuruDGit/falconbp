@@ -7,7 +7,7 @@ const props = [
     {
         icon: Target,
         title: "Clarity without loss of authority",
-        desc: "We inform, challenge, and support - but the decision remains yours.",
+        desc: "We inform, challenge and support - but the decision remains yours.",
         size: "lg:col-span-7 lg:row-start-1",
         dominant: true,
         cta: "Explore the decision system"
@@ -15,7 +15,7 @@ const props = [
     {
         icon: Microscope,
         title: "Integration over fragmentation",
-        desc: "Internal judgement, external signal, and execution reality are bound together around one decision.",
+        desc: "Internal judgement, external signal and execution reality are bound together around one decision.",
         size: "lg:col-span-5 lg:row-start-1"
     },
     {
@@ -33,7 +33,7 @@ const props = [
     {
         icon: Rocket,
         title: "Decisions that can be owned",
-        desc: "Clarity that can be defended to boards, investors, and stakeholders.",
+        desc: "Clarity that can be defended to boards, investors and stakeholders.",
         size: "lg:col-span-4 lg:row-start-2"
     }
 ];
@@ -116,3 +116,4 @@ const ValueProp: React.FC = () => {
 };
 
 export default ValueProp;
+

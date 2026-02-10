@@ -37,10 +37,10 @@ export default function ExternalSignalPage() {
                     </div>
                     <div className="lg:col-span-6 space-y-6">
                         <p>
-                            Our research is scoped tightly, delivered with speed and discretion, and structured to surface insight, implications, and consequences rather than raw analysis. Research outputs are designed to be read by decision-makers, not analysts.
+                            Our research is scoped tightly, delivered with speed and discretion and structured to surface insight, implications and consequences rather than raw analysis. Research outputs are designed to be read by decision-makers, not analysts.
                         </p>
                         <p>
-                            Access to sample research is intentionally controlled. Engagements are governed by strict confidentiality, and client identities are never disclosed. Trust and discretion are not features of our work. They are foundational.
+                            Access to sample research is intentionally controlled. Engagements are governed by strict confidentiality and client identities are never disclosed. Trust and discretion are not features of our work. They are foundational.
                         </p>
                         <div className="frosted-glass rounded-[2rem] p-8 md:p-10">
                             <p className="label-tech mb-6">SIGNAL PRINCIPLES</p>
@@ -78,7 +78,7 @@ export default function ExternalSignalPage() {
                     </div>
                     <div className="lg:col-span-6 space-y-6">
                         <p>
-                            FalconBridge research is built differently. We begin with the decision frame. We define what must be known to decide responsibly. We then collect, synthesise, and structure signal so it can be used at the point of commitment.
+                            FalconBridge research is built differently. We begin with the decision frame. We define what must be known to decide responsibly. We then collect, synthesise and structure signal so it can be used at the point of commitment.
                         </p>
                         <div className="frosted-glass rounded-[2rem] p-8 md:p-10">
                             <p className="text-white/60 text-sm leading-relaxed">
@@ -118,7 +118,7 @@ export default function ExternalSignalPage() {
                         </div>
                     </div>
                     <p className="mt-10">
-                        We are explicit about what is knowable, what remains uncertain, and where judgement must still be applied. Research informs judgement. It does not replace it.
+                        We are explicit about what is knowable, what remains uncertain and where judgement must still be applied. Research informs judgement. It does not replace it.
                     </p>
                 </div>
             </section>
@@ -149,3 +149,4 @@ export default function ExternalSignalPage() {
         </div>
     );
 }
+

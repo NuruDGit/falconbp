@@ -9,7 +9,9 @@ const founders = [
         name: "Joel Arcus",
         role: "Co-Founder & Managing Partner",
         image: joelImage,
-        bio: "Joel's work focuses on sharpening judgement, reducing distortion, and helping leaders think clearly under pressure.",
+        bio: "Joel's work focuses on sharpening judgement, reducing distortion and helping leaders think clearly under pressure.",
+        linkedin: "https://www.linkedin.com/in/joelarcus/",
+        email: "joel@falconbp.com",
         details: [
             "Decision-bound coaching",
             "Clarity under pressure",
@@ -21,6 +23,8 @@ const founders = [
         role: "Co-Founder & Research Partner",
         image: quincyImage,
         bio: "Quincy's work focuses on transforming complex external signal into decision-grade clarity at the point of commitment.",
+        linkedin: "https://www.linkedin.com/in/quincy-jc-beukes/",
+        email: "quincy@falconbp.com",
         details: [
             "Decision-led research",
             "Signal integration",
@@ -66,10 +70,10 @@ const Founders: React.FC = () => {
                                 </div>
 
                                 <div className="flex gap-3">
-                                    <a href="#" className="p-2.5 bg-white/10 border border-white/15 rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300">
+                                    <a href={founder.linkedin} target="_blank" rel="noopener noreferrer" className="p-2.5 bg-white/10 border border-white/15 rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300">
                                         <Linkedin className="w-4.5 h-4.5" />
                                     </a>
-                                    <a href="#" className="p-2.5 bg-white/10 border border-white/15 rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300">
+                                    <a href={`mailto:${founder.email}`} className="p-2.5 bg-white/10 border border-white/15 rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300">
                                         <Mail className="w-4.5 h-4.5" />
                                     </a>
                                 </div>
