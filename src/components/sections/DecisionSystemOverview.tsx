@@ -35,9 +35,9 @@ const DecisionSystemOverview: React.FC = () => {
                             <Image
                                 src={systemVisual}
                                 alt="FalconBridge Decision System"
-                                className="w-full h-auto scale-[1.02] opacity-85 group-hover:scale-[1] transition-transform duration-1000"
+                                className="w-full h-auto scale-[1.02] opacity-95 group-hover:scale-[1] transition-transform duration-1000"
                             />
-                            <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-brand-navy/35 via-brand-navy/10 to-brand-navy/70" />
+                            <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-brand-navy/20 via-brand-navy/5 to-brand-navy/45" />
                             <div className="pointer-events-none absolute inset-0 rounded-[2rem] ring-1 ring-brand-navy/40" />
                             <div className="pointer-events-none absolute -inset-10 bg-brand-navy/70 blur-2xl opacity-70" />
                         </div>

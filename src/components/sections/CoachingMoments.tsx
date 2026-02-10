@@ -4,12 +4,12 @@ const moments = [
     {
         id: "I",
         label: "Pre-research decision clarity",
-        desc: "Clarifying the decision question before any research is commissioned. Defining constraints and isolating the question."
+        desc: "Clarify the decision question before any research is commissioned, define constraints, and isolate what truly needs to be decided."
     },
     {
         id: "II",
         label: "Post-research decision integration",
-        desc: "Integrating research with internal judgement and organizational reality to convert insight into commitment."
+        desc: "Integrate signal with internal judgement and execution reality to convert insight into commitment."
     },
     {
         id: "III",
@@ -24,14 +24,17 @@ const CoachingMoments: React.FC = () => {
             <div className="container-editorial">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
                     <div className="lg:sticky lg:top-40 max-w-xl">
-                        <span className="label-tech mb-6">COACHING</span>
+                        <span className="label-tech mb-6">DECISION PROCESS</span>
                         <h2 className="mb-6">
-                            Internal judgement<br className="hidden md:block" />{" "}
-                            <span className="text-brand-gold italic font-cinzel opacity-90">in the room.</span>
+                            Decision moments<br className="hidden md:block" />{" "}
+                            <span className="text-brand-gold italic font-cinzel opacity-90">in the work.</span>
                         </h2>
                         <div className="space-y-6 max-w-lg">
                             <p>
-                                Internal judgement is the foundation of every decision, influenced by logic, experience, identity, and fear of consequence at senior levels.
+                                Decisions are shaped by experience, incentives, and consequence. We surface those forces before and after research so the final call is grounded in reality.
+                            </p>
+                            <p className="text-white/70">
+                                These are the decision moments where the three dimensions are tested, aligned, and made operational.
                             </p>
                             <div className="pt-4">
                                 <p className="text-brand-gold italic font-cinzel text-xl md:text-2xl opacity-90">
@@ -42,11 +45,11 @@ const CoachingMoments: React.FC = () => {
                     </div>
 
                     <div className="space-y-5 relative">
-                        <h3 className="label-tech mb-10">Coaching interaction points</h3>
+                        <h3 className="label-tech mb-10">Decision moments where the dimensions show up</h3>
                         {moments.map((moment) => (
                             <div key={moment.id} className="group p-10 frosted-glass rounded-[2rem] hover:border-brand-gold/30 hover:bg-white/[0.04] hover:-translate-y-1 transition-all duration-1000">
                                 <div className="flex gap-6 items-center mb-6">
-                                    <span className="text-brand-gold/40 font-technical text-xl group-hover:text-brand-gold transition-colors duration-500">Moment {moment.id}</span>
+                                    <span className="text-brand-gold/40 font-technical text-xl group-hover:text-brand-gold transition-colors duration-500">Decision Moment {moment.id}</span>
                                     <div className="accent-divider" />
                                 </div>
                                 <h4 className="text-xl md:text-2xl font-technical uppercase tracking-tight mb-4 group-hover:text-brand-gold transition-colors duration-500">{moment.label}</h4>
