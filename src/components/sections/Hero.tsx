@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
                 <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
                     <h1 className="font-technical text-[clamp(2.5rem,7vw,6rem)] leading-[1.05] text-white font-medium tracking-tight mb-10 animate-fade-in-up">
                         Sharper thinking when<br className="hidden md:block" />{" "}
-                        <span className="text-brand-gold font-technical italic font-normal">the decision stays with you.</span>
+                        <span className="text-brand-gold font-cinzel italic font-normal">the decision stays with you.</span>
                     </h1>
 
                     <p className="text-[clamp(1.1rem,1.5vw,1.35rem)] text-white/70 max-w-3xl font-light leading-relaxed mb-12 animate-fade-in-up [animation-delay:0.2s]">

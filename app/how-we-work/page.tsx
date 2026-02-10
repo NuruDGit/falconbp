@@ -4,7 +4,6 @@ import DecisionSystemOverview from '@/components/sections/DecisionSystemOverview
 import ThreeDimensions from '@/components/sections/ThreeDimensions';
 import CoachingMoments from '@/components/sections/CoachingMoments';
 import EngagementFlow from '@/components/sections/EngagementFlow';
-import EngagementDiscipline from '@/components/sections/EngagementDiscipline';
 import WhoWeAreNot from '@/components/sections/WhoWeAreNot';
 import Confidentiality from '@/components/sections/Confidentiality';
 import WorkFinalCTA from '@/components/sections/WorkFinalCTA';
@@ -17,7 +16,6 @@ export default function HowWeWorkPage() {
             <ThreeDimensions />
             <CoachingMoments />
             <EngagementFlow />
-            <EngagementDiscipline />
             <WhoWeAreNot />
             <Confidentiality />
             <WorkFinalCTA />
