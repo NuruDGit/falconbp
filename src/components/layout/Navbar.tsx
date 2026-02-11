@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
             )}>
                 <div className="nav-brand">
                     <Link href="/" className="flex items-center gap-3">
-                        <Image src={logo} alt="FalconBridge Partners" className="h-12 w-auto" />
+                        <Image src={logo} alt="FalconBridge Partners" className="h-[60px] w-auto" />
                     </Link>
                 </div>
 
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
                         </li>
                         <li>
                             <Link href="/about" className="text-[0.8rem] font-medium text-white/70 px-5 py-2.5 rounded-full hover:text-white hover:bg-white/5 transition-all">
-                                About
+                                About Us
                             </Link>
                         </li>
                         <li>

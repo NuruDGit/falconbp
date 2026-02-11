@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
                     <div className="lg:col-span-2">
                         <Link href="/" className="inline-block mb-8">
-                            <Image src={logo} alt="FalconBridge Partners" className="h-14 w-auto" />
+                            <Image src={logo} alt="FalconBridge Partners" className="h-[70px] w-auto" />
                         </Link>
                         <p className="text-white/40 max-w-sm font-light leading-relaxed mb-10 text-sm">
                             A private strategic partnership providing boardroom clarity and
