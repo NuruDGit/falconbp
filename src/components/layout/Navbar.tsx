@@ -99,7 +99,7 @@ const Navbar: React.FC = () => {
                             How We Work
                         </Link>
                         <Link href="/about" onClick={() => setMenuOpen(false)} className="block text-white/80 text-sm font-technical uppercase tracking-widest">
-                            About
+                            About Us
                         </Link>
                         <Button href="/contact" variant="primary" size="sm" icon={ArrowRight} className="w-full justify-center" onClick={() => setMenuOpen(false)}>
                             Book A Clarity Call
