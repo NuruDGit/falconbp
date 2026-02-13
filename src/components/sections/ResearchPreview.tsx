@@ -4,17 +4,21 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Lock, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import { useRecaptcha } from '@/hooks/useRecaptcha';
 import goldenLine from '@/assets/images/golden_line_in_the_dark_sky.png';
 
 const ResearchPreview: React.FC = () => {
+    const { getRecaptchaToken } = useRecaptcha();
     const [isOpen, setIsOpen] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [error, setError] = useState<string | null>(null);
     const [formData, setFormData] = useState({
         fullName: '',
         organization: '',
         role: '',
         email: '',
-        decision: ''
+        decisionContext: ''
     });
 
     const inclusions = [
@@ -50,12 +54,13 @@ const ResearchPreview: React.FC = () => {
     const handleClose = () => {
         setIsOpen(false);
         setIsSubmitted(false);
+        setError(null);
         setFormData({
             fullName: '',
             organization: '',
             role: '',
             email: '',
-            decision: ''
+            decisionContext: ''
         });
     };
 
@@ -66,17 +71,38 @@ const ResearchPreview: React.FC = () => {
 
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
+        if (isSubmitting) return;
+        setIsSubmitting(true);
+        setError(null);
         try {
+            // Get reCAPTCHA token
+            const recaptchaToken = await getRecaptchaToken();
+            if (!recaptchaToken) {
+                setError('Unable to verify request. Please try again.');
+                setIsSubmitting(false);
+                return;
+            }
+
             const response = await fetch('/api/submit-research', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    ...formData,
+                    recaptchaToken
+                }),
             });
+            
             if (response.ok) {
                 setIsSubmitted(true);
+            } else {
+                const data = await response.json();
+                setError(data.error || 'Failed to submit form. Please try again.');
             }
         } catch (error) {
             console.error('Error submitting form:', error);
+            setError('An error occurred. Please try again.');
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -192,6 +218,11 @@ const ResearchPreview: React.FC = () => {
 
                             {!isSubmitted ? (
                                 <form onSubmit={handleSubmit} className="space-y-5">
+                                    {error && (
+                                        <div className="mb-4 bg-red-900/20 border border-red-500/30 rounded-lg p-4">
+                                            <p className="text-red-200 text-sm">{error}</p>
+                                        </div>
+                                    )}
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         <div className="space-y-2">
                                             <label className="text-[0.65rem] font-technical text-white/50 uppercase tracking-[0.15em] block">
@@ -253,8 +284,8 @@ const ResearchPreview: React.FC = () => {
                                             What decision are you exploring? (optional)
                                         </label>
                                         <textarea
-                                            name="decision"
-                                            value={formData.decision}
+                                            name="decisionContext"
+                                            value={formData.decisionContext}
                                             onChange={handleChange}
                                             rows={2}
                                             className="w-full rounded-lg bg-white/3 border border-white/20 px-3.5 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-brand-gold/50 focus:bg-white/6 transition-all duration-300 hover:border-white/30 resize-none"
@@ -263,8 +294,8 @@ const ResearchPreview: React.FC = () => {
                                     </div>
 
                                     <div className="pt-2 border-t border-white/10">
-                                        <Button type="submit" variant="primary" size="md" className="shadow-lg shadow-brand-gold/20">
-                                            Request access
+                                        <Button type="submit" variant="primary" size="md" className="shadow-lg shadow-brand-gold/20" disabled={isSubmitting}>
+                                            {isSubmitting ? 'Requesting...' : 'Request access'}
                                         </Button>
                                         <p className="text-xs text-white/40 mt-3 font-light">Access is reviewed manually.</p>
                                     </div>

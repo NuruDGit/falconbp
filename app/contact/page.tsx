@@ -4,11 +4,14 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import { useRecaptcha } from '@/hooks/useRecaptcha';
 import heroBg from '@/assets/images/how-we-work.png';
 
 const ContactPage: React.FC = () => {
+    const { getRecaptchaToken } = useRecaptcha();
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [error, setError] = useState<string | null>(null);
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
@@ -26,12 +29,25 @@ const ContactPage: React.FC = () => {
         event.preventDefault();
         if (isSubmitting) return;
         setIsSubmitting(true);
+        setError(null);
         try {
+            // Get reCAPTCHA token
+            const recaptchaToken = await getRecaptchaToken();
+            if (!recaptchaToken) {
+                setError('Unable to verify request. Please try again.');
+                setIsSubmitting(false);
+                return;
+            }
+
             const response = await fetch('/api/submit-contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    ...formData,
+                    recaptchaToken
+                }),
             });
+
             if (response.ok) {
                 setIsSubmitted(true);
                 setFormData({
@@ -41,9 +57,13 @@ const ContactPage: React.FC = () => {
                     role: '',
                     decisionContext: ''
                 });
+            } else {
+                const data = await response.json();
+                setError(data.error || 'Failed to submit form. Please try again.');
             }
         } catch (error) {
             console.error('Error submitting contact form:', error);
+            setError('An error occurred. Please try again.');
         } finally {
             setIsSubmitting(false);
         }
@@ -95,6 +115,11 @@ const ContactPage: React.FC = () => {
 
                         <div className="lg:col-span-7">
                             <div className="frosted-glass rounded-[2.5rem] p-8 md:p-10">
+                                {error && (
+                                    <div className="mb-6 bg-red-900/20 border border-red-500/30 rounded-lg p-4">
+                                        <p className="text-red-200 text-sm">{error}</p>
+                                    </div>
+                                )}
                                 {!isSubmitted ? (
                                     <form onSubmit={handleSubmit} className="space-y-5">
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
