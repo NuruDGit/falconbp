@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRight, Play } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
-import csuiteImage from '@/assets/images/c-suite-executives.png';
+import csuiteImage from '@/assets/images/c-suite-executives2.jpg';
 
 const Hero: React.FC = () => {
     return (

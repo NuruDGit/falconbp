@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
                             <a href="https://www.linkedin.com/company/falconbps" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all">
                                 <Linkedin className="w-4 h-4" />
                             </a>
-                            <a href="mailto:researchteam@falconbp.com" className="p-3 bg-white/5 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all">
+                            <a href="mailto:engagements@falconbp.com" className="p-3 bg-white/5 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all">
                                 <Mail className="w-4 h-4" />
                             </a>
                             <a href="tel:+971527068408" className="p-3 bg-white/5 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all">

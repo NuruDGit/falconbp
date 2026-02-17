@@ -12,3 +12,4 @@ tsconfig.tsbuildinfo
 dist
 dist-ssr
 *.local
+dev_server.log
