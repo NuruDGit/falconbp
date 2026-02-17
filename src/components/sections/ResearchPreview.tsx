@@ -4,15 +4,15 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Lock, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
-import { useRecaptcha } from '@/hooks/useRecaptcha';
+import TurnstileWidget from '@/components/ui/TurnstileWidget';
 import goldenLine from '@/assets/images/golden_line_in_the_dark_sky.png';
 
 const ResearchPreview: React.FC = () => {
-    const { getRecaptchaToken } = useRecaptcha();
     const [isOpen, setIsOpen] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
+    const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
     const [formData, setFormData] = useState({
         fullName: '',
         organization: '',
@@ -55,6 +55,7 @@ const ResearchPreview: React.FC = () => {
         setIsOpen(false);
         setIsSubmitted(false);
         setError(null);
+        setTurnstileToken(null);
         setFormData({
             fullName: '',
             organization: '',
@@ -75,9 +76,7 @@ const ResearchPreview: React.FC = () => {
         setIsSubmitting(true);
         setError(null);
         try {
-            // Get reCAPTCHA token
-            const recaptchaToken = await getRecaptchaToken();
-            if (!recaptchaToken) {
+            if (!turnstileToken) {
                 setError('Unable to verify request. Please try again.');
                 setIsSubmitting(false);
                 return;
@@ -88,7 +87,7 @@ const ResearchPreview: React.FC = () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     ...formData,
-                    recaptchaToken
+                    turnstileToken
                 }),
             });
             
@@ -291,6 +290,10 @@ const ResearchPreview: React.FC = () => {
                                             className="w-full rounded-lg bg-white/3 border border-white/20 px-3.5 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-brand-gold/50 focus:bg-white/6 transition-all duration-300 hover:border-white/30 resize-none"
                                             placeholder="Short note only - no confidential detail required."
                                         />
+                                    </div>
+
+                                    <div className="pt-1">
+                                        <TurnstileWidget onTokenChange={setTurnstileToken} />
                                     </div>
 
                                     <div className="pt-2 border-t border-white/10">

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
-import { sanitizeInput, isValidEmail, verifyRecaptcha } from '@/lib/security';
+import { sanitizeInput, isValidEmail, verifyTurnstile } from '@/lib/security';
 import { checkRateLimit } from '@/lib/rateLimit';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -8,9 +8,11 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request: NextRequest) {
   try {
     // Get client IP for rate limiting
-    const ip = request.headers.get('x-forwarded-for') || 
-               request.headers.get('x-real-ip') || 
-               'unknown';
+    const forwardedFor = request.headers.get('x-forwarded-for');
+    const ip =
+      (forwardedFor ? forwardedFor.split(',')[0].trim() : null) ||
+      request.headers.get('x-real-ip') ||
+      'unknown';
 
     // Check rate limit (max 5 submissions per hour per IP)
     if (!checkRateLimit(ip, 5)) {
@@ -23,17 +25,18 @@ export async function POST(request: NextRequest) {
     const data = await request.json();
 
     // Validate required fields
-    if (!data.fullName || !data.email || !data.decisionContext || !data.recaptchaToken) {
+    if (!data.fullName || !data.email || !data.decisionContext || !data.turnstileToken) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
       );
     }
 
-    // Verify reCAPTCHA
-    const isValidCaptcha = await verifyRecaptcha(
-      data.recaptchaToken,
-      process.env.RECAPTCHA_SECRET_KEY || ''
+    // Verify Cloudflare Turnstile
+    const isValidCaptcha = await verifyTurnstile(
+      data.turnstileToken,
+      process.env.TURNSTILE_SECRET_KEY || '',
+      ip
     );
     if (!isValidCaptcha) {
       return NextResponse.json(

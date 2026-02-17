@@ -18,33 +18,49 @@ export function isValidEmail(email: string): boolean {
 }
 
 /**
- * Validate reCAPTCHA response
+ * Validate Cloudflare Turnstile response
  */
-export async function verifyRecaptcha(token: string, secretKey: string): Promise<boolean> {
+export async function verifyTurnstile(token: string, secretKey: string, remoteIp?: string): Promise<boolean> {
   if (!token || !secretKey) return false;
 
   try {
-    const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+    const formData = new URLSearchParams();
+    formData.set('secret', secretKey);
+    formData.set('response', token);
+    if (remoteIp) {
+      formData.set('remoteip', remoteIp);
+    }
+
+    const response = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: `secret=${secretKey}&response=${token}`,
+      body: formData.toString(),
     });
 
     const data = await response.json();
     if (!data?.success) {
+      console.error('Turnstile verification unsuccessful:', {
+        success: data?.success,
+        errorCodes: data?.['error-codes'],
+        action: data?.action,
+        hostname: data?.hostname,
+      });
       return false;
     }
 
-    // For v3 keys, enforce score threshold. For non-score responses, success is sufficient.
-    if (typeof data.score === 'number') {
-      return data.score > 0.5;
+    if (data?.action && data.action !== 'submit') {
+      console.error('Turnstile action mismatch:', {
+        expectedAction: 'submit',
+        actualAction: data.action,
+      });
+      return false;
     }
 
     return true;
   } catch (error) {
-    console.error('reCAPTCHA verification failed:', error);
+    console.error('Turnstile verification failed:', error);
     return false;
   }
 }

@@ -4,14 +4,14 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
-import { useRecaptcha } from '@/hooks/useRecaptcha';
+import TurnstileWidget from '@/components/ui/TurnstileWidget';
 import heroBg from '@/assets/images/how-we-work.png';
 
 const ContactPage: React.FC = () => {
-    const { getRecaptchaToken } = useRecaptcha();
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
+    const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
@@ -31,9 +31,7 @@ const ContactPage: React.FC = () => {
         setIsSubmitting(true);
         setError(null);
         try {
-            // Get reCAPTCHA token
-            const recaptchaToken = await getRecaptchaToken();
-            if (!recaptchaToken) {
+            if (!turnstileToken) {
                 setError('Unable to verify request. Please try again.');
                 setIsSubmitting(false);
                 return;
@@ -44,7 +42,7 @@ const ContactPage: React.FC = () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     ...formData,
-                    recaptchaToken
+                    turnstileToken
                 }),
             });
 
@@ -58,8 +56,22 @@ const ContactPage: React.FC = () => {
                     decisionContext: ''
                 });
             } else {
-                const data = await response.json();
-                setError(data.error || 'Failed to submit form. Please try again.');
+                const contentType = response.headers.get('content-type') || '';
+                let message = `Failed to submit form (${response.status}). Please try again.`;
+
+                if (contentType.includes('application/json')) {
+                    const data = await response.json();
+                    if (data?.error) {
+                        message = data.error;
+                    }
+                } else {
+                    const text = await response.text();
+                    if (text) {
+                        message = `Failed to submit form (${response.status}).`;
+                    }
+                }
+
+                setError(message);
             }
         } catch (error) {
             console.error('Error submitting contact form:', error);
@@ -189,6 +201,10 @@ const ContactPage: React.FC = () => {
                                                 className="w-full rounded-lg bg-white/3 border border-white/20 px-3.5 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-brand-gold/50 focus:bg-white/6 transition-all duration-300 hover:border-white/30 resize-none"
                                                 placeholder="What decision are you working through? Keep this high-level."
                                             />
+                                        </div>
+
+                                        <div className="pt-1">
+                                            <TurnstileWidget onTokenChange={setTurnstileToken} />
                                         </div>
 
                                         <div className="pt-2 border-t border-white/10 flex items-center gap-4">
