@@ -24,7 +24,7 @@ export default function TermsOfEngagementPage() {
                     </span>
                     <h1 className="text-5xl md:text-7xl font-technical mb-12 leading-[1.1] tracking-tight">
                         <span className="text-white">Engagement</span><br className="hidden md:block" />{" "}
-                        <span className="text-brand-gold italic font-cinzel opacity-90">and boundaries.</span>
+                        <span className="text-brand-gold italic font-serif-accent opacity-90">and boundaries.</span>
                     </h1>
                     <div className="max-w-3xl mx-auto">
                         <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed">
@@ -67,7 +67,7 @@ export default function TermsOfEngagementPage() {
                         <ul className="space-y-3 text-white/60 font-light leading-relaxed list-disc pl-5">
                             <li>FalconBridge Partners does not make decisions on their behalf</li>
                             <li>All decisions are taken by the client using their own judgement</li>
-                            <li>Any action taken following our work is at the client's sole discretion</li>
+                            <li>Any action taken following our work is at the client&apos;s sole discretion</li>
                         </ul>
                         <p className="text-white/60 font-light leading-relaxed">
                             We support decision quality. We do not assume decision ownership.
@@ -136,4 +136,7 @@ export default function TermsOfEngagementPage() {
         </section>
     );
 }
+
+
+
 

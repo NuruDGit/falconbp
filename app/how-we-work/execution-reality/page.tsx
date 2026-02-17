@@ -41,7 +41,7 @@ export default function ExecutionRealityPage() {
                         </p>
                         <div className="frosted-glass rounded-[2rem] p-8 md:p-10">
                             <p className="label-tech mb-6">EXECUTION LENS</p>
-                            <p className="text-brand-gold italic font-cinzel text-xl opacity-90">
+                            <p className="text-brand-gold italic font-serif-accent text-xl opacity-90">
                                 The goal is realism, not risk avoidance.
                             </p>
                             <div className="mt-8 accent-divider" />
@@ -104,7 +104,7 @@ export default function ExecutionRealityPage() {
                             Part of our role is to help leaders sense when to slow the process because clarity is degrading and when to accelerate because alignment is sufficient and hesitation is creating unnecessary risk. This calibration of pace is a core element of the FalconBridge Decision System.
                         </p>
                         <div className="frosted-glass rounded-[2rem] p-8 md:p-10">
-                            <p className="text-brand-gold italic font-cinzel text-xl opacity-90">
+                            <p className="text-brand-gold italic font-serif-accent text-xl opacity-90">
                                 The right pace protects judgement under pressure.
                             </p>
                         </div>
@@ -150,4 +150,7 @@ export default function ExecutionRealityPage() {
         </div>
     );
 }
+
+
+
 

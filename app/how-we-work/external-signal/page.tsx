@@ -59,7 +59,7 @@ export default function ExternalSignalPage() {
                                 </div>
                             </div>
                             <div className="mt-8 accent-divider" />
-                            <p className="mt-6 text-brand-gold italic font-cinzel text-xl opacity-90">
+                            <p className="mt-6 text-brand-gold italic font-serif-accent text-xl opacity-90">
                                 Signal without authority transfer.
                             </p>
                         </div>
@@ -137,7 +137,7 @@ export default function ExternalSignalPage() {
                             The result is not answers but decision-grade clarity that the leader can defend because authority has not been outsourced.
                         </p>
                         <div className="frosted-glass rounded-[2rem] p-8 md:p-10">
-                            <p className="text-brand-gold italic font-cinzel text-xl opacity-90">
+                            <p className="text-brand-gold italic font-serif-accent text-xl opacity-90">
                                 External signal strengthens judgement. It does not replace it.
                             </p>
                         </div>
@@ -149,4 +149,7 @@ export default function ExternalSignalPage() {
         </div>
     );
 }
+
+
+
 

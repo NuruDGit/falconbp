@@ -46,7 +46,7 @@ const ValueProp: React.FC = () => {
                     <span className="label-tech mb-4">THE EDGE</span>
                     <h2 className="mb-6">
                         Designed for decisions that<br className="hidden md:block" />{" "}
-                        <span className="text-brand-gold italic font-cinzel opacity-90">cannot afford mistakes.</span>
+                        <span className="text-brand-gold italic font-serif-accent opacity-90">cannot afford mistakes.</span>
                     </h2>
                 </div>
 
@@ -85,7 +85,7 @@ const ValueProp: React.FC = () => {
                                     <div className="w-14 h-14 bg-white/3 shadow-[inset_0_0_0_1px_rgba(199,169,117,0.18)] rounded-2xl flex items-center justify-center mb-10 group-hover:bg-white/5 transition-all duration-500">
                                         <prop.icon className="w-6 h-6 text-brand-gold transition-transform duration-500 group-hover:scale-[1.05]" />
                                     </div>
-                                    <h3 className="text-lg font-technical mb-4 group-hover:text-brand-gold transition-colors duration-500 uppercase tracking-wide leading-tight">
+                                    <h3 className="text-lg font-serif-accent italic mb-4 group-hover:text-brand-gold transition-colors duration-500 uppercase tracking-wide leading-tight">
                                         {prop.title}
                                     </h3>
                                     <p className="text-white/40 text-[0.85rem] leading-relaxed font-light">
@@ -116,4 +116,7 @@ const ValueProp: React.FC = () => {
 };
 
 export default ValueProp;
+
+
+
 

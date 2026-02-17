@@ -23,7 +23,7 @@ const DecisionSystemOverview: React.FC = () => {
                                 the engagement.
                             </p>
                             <div className="pt-6">
-                                <p className="text-brand-gold italic font-cinzel text-xl md:text-2xl opacity-90">
+                                <p className="text-brand-gold italic font-serif-accent text-xl md:text-2xl opacity-90">
                                     The system strengthens judgement without prescribing outcomes.
                                 </p>
                             </div>
@@ -49,4 +49,7 @@ const DecisionSystemOverview: React.FC = () => {
 };
 
 export default DecisionSystemOverview;
+
+
+
 

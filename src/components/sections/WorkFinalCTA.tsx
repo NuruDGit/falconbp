@@ -31,7 +31,7 @@ const WorkFinalCTA: React.FC = () => {
                         What decision are you<br className="hidden md:block" />{" "}actually being asked to make?
                     </h2>
 
-                    <p className="mb-20 max-w-4xl mx-auto italic font-cinzel opacity-90 text-2xl">
+                    <p className="mb-20 max-w-4xl mx-auto italic font-serif-accent opacity-90 text-2xl">
                         When that question feels harder than it should, clarity is already being compromised.
                         That is usually the moment FalconBridge Partners is engaged.
                     </p>
@@ -53,3 +53,6 @@ const WorkFinalCTA: React.FC = () => {
 };
 
 export default WorkFinalCTA;
+
+
+

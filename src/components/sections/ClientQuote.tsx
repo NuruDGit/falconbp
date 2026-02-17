@@ -9,7 +9,7 @@ const ClientQuote: React.FC = () => {
                     <blockquote className="text-center">
                         <p className="font-technical text-[clamp(2rem,5vw,4.5rem)] leading-[1.15] text-white/90 font-light tracking-tight max-w-6xl mx-auto">
                             Our clients are not looking for opinions.{' '}
-                            <span className="text-brand-gold font-cinzel italic font-normal">
+                            <span className="text-brand-gold font-serif-accent italic font-normal">
                                 They are looking for clarity they can trust.
                             </span>
                         </p>
@@ -26,3 +26,6 @@ const ClientQuote: React.FC = () => {
 };
 
 export default ClientQuote;
+
+
+

@@ -7,7 +7,7 @@ const WhoWeAreNot: React.FC = () => {
             <div className="container-editorial">
                 <div className="mb-20 text-center">
                     <h2>
-                        What we are. What we <span className="text-brand-gold italic font-cinzel opacity-90">are not.</span>
+                        What we are. What we <span className="text-brand-gold italic font-serif-accent opacity-90">are not.</span>
                     </h2>
                 </div>
 
@@ -85,4 +85,7 @@ const WhoWeAreNot: React.FC = () => {
 };
 
 export default WhoWeAreNot;
+
+
+
 

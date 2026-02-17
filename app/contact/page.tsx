@@ -88,7 +88,7 @@ const ContactPage: React.FC = () => {
                     <span className="label-tech mb-6 inline-block">REQUEST CONVERSATION</span>
                     <h1 className="mb-6">
                         What decision are you<br className="hidden md:block" />{" "}
-                        <span className="text-brand-gold italic font-cinzel opacity-90">being asked to make?</span>
+                        <span className="text-brand-gold italic font-serif-accent opacity-90">being asked to make?</span>
                     </h1>
                     <p className="text-lg md:text-2xl font-light leading-relaxed max-w-3xl mx-auto text-white/70">
                         We work with founders, CEOs and investors facing decisions with real consequence. If the
@@ -218,4 +218,7 @@ const ContactPage: React.FC = () => {
 };
 
 export default ContactPage;
+
+
+
 

@@ -33,7 +33,7 @@ const TrustAndFinalCTA: React.FC = () => {
                         <h2 className="text-4xl md:text-5xl font-technical text-white leading-tight max-w-4xl">
                             Confidentiality is not a feature.
                             <br className="hidden md:block" />{" "}
-                            <span className="text-brand-gold italic font-light">It is the foundation.</span>
+                            <span className="text-brand-gold italic font-serif-accent font-light">It is the foundation.</span>
                         </h2>
                         <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed max-w-3xl">
                             Our clients operate in competitive, sensitive environments. Discretion is essential.
@@ -54,7 +54,7 @@ const TrustAndFinalCTA: React.FC = () => {
 
                     <div className="flex items-center gap-4 mt-14">
                         <div className="h-px flex-1 bg-white/5" />
-                        <p className="text-xl md:text-2xl font-technical text-brand-gold italic">Trust is the product.</p>
+                        <p className="text-xl md:text-2xl font-serif-accent text-brand-gold italic">Trust is the product.</p>
                         <div className="h-px flex-1 bg-white/5" />
                     </div>
                 </div>
@@ -83,7 +83,7 @@ const TrustAndFinalCTA: React.FC = () => {
                             What decision are you<br className="hidden md:block" />{" "}actually being asked to make?
                         </h2>
 
-                        <p className="mb-20 max-w-4xl mx-auto italic font-cinzel opacity-90 text-2xl">
+                        <p className="mb-20 max-w-4xl mx-auto italic font-serif-accent opacity-90 text-2xl">
                             When that question feels harder than it should, clarity is already being compromised.
                             That is usually the moment FalconBridge Partners is engaged.
                         </p>
@@ -108,3 +108,6 @@ const TrustAndFinalCTA: React.FC = () => {
 };
 
 export default TrustAndFinalCTA;
+
+
+

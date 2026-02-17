@@ -1,29 +1,29 @@
 declare module '*.png' {
-    const value: string;
+    const value: string | import('next/image').StaticImageData;
     export default value;
 }
 
 declare module '*.svg' {
-    const content: any;
+    const content: string | import('next/image').StaticImageData;
     export default content;
 }
 
 declare module '*.jpg' {
-    const value: string;
+    const value: string | import('next/image').StaticImageData;
     export default value;
 }
 
 declare module '*.jpeg' {
-    const value: string;
+    const value: string | import('next/image').StaticImageData;
     export default value;
 }
 
 declare module '*.gif' {
-    const value: string;
+    const value: string | import('next/image').StaticImageData;
     export default value;
 }
 
 declare module '*.webp' {
-    const value: string;
+    const value: string | import('next/image').StaticImageData;
     export default value;
 }

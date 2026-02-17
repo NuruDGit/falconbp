@@ -28,7 +28,7 @@ const Confidentiality: React.FC = () => {
                     <h2 className="mb-4">
                         Confidentiality is not a feature.
                         <br className="hidden md:block" />{" "}
-                        <span className="text-brand-gold italic font-cinzel opacity-90">It is the foundation.</span>
+                        <span className="text-brand-gold italic font-serif-accent opacity-90">It is the foundation.</span>
                     </h2>
                     <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed max-w-3xl">
                         Our clients operate in competitive, sensitive environments. Discretion is essential.
@@ -56,7 +56,7 @@ const Confidentiality: React.FC = () => {
 
                 <div className="flex items-center gap-4 mt-14">
                     <div className="accent-divider" />
-                    <p className="text-xl md:text-2xl font-technical text-brand-gold italic">Trust is the product.</p>
+                    <p className="text-xl md:text-2xl font-serif-accent text-brand-gold italic">Trust is the product.</p>
                     <div className="accent-divider" />
                 </div>
             </div>
@@ -65,3 +65,6 @@ const Confidentiality: React.FC = () => {
 };
 
 export default Confidentiality;
+
+
+

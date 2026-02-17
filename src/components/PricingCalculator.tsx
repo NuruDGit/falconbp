@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useMemo, useState } from 'react';
+import Image from 'next/image';
 import worldMapSvg from '@/assets/images/world_map.svg';
 
 const PRICE_OPTIONS = [
@@ -190,10 +191,12 @@ const PricingCalculator: React.FC = () => {
         return roundToNearest10(selectedPrice * rate);
     }, [currency, rates, selectedPrice]);
 
+    const worldMapSrc = typeof worldMapSvg === 'string' ? worldMapSvg : worldMapSvg.src;
+
     return (
         <div className="relative bg-white/2 border border-white/5 rounded-3xl p-10 overflow-hidden">
             <div className="absolute inset-0 opacity-20 pointer-events-none">
-                <img src={worldMapSvg.src || worldMapSvg} alt="" className="w-full h-full object-cover" />
+                <Image src={worldMapSrc} alt="" fill className="object-cover" />
             </div>
             
             <div className="relative z-10">

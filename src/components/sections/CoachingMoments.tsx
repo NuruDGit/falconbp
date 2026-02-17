@@ -27,7 +27,7 @@ const CoachingMoments: React.FC = () => {
                         <span className="label-tech mb-6">DECISION PROCESS</span>
                         <h2 className="mb-6">
                             Decision moments<br className="hidden md:block" />{" "}
-                            <span className="text-brand-gold italic font-cinzel opacity-90">in the work.</span>
+                            <span className="text-brand-gold italic font-serif-accent opacity-90">in the work.</span>
                         </h2>
                         <div className="space-y-6 max-w-lg">
                             <p>
@@ -37,7 +37,7 @@ const CoachingMoments: React.FC = () => {
                                 These are the decision moments where the three dimensions are tested, aligned and made operational.
                             </p>
                             <div className="pt-4">
-                                <p className="text-brand-gold italic font-cinzel text-xl md:text-2xl opacity-90">
+                                <p className="text-brand-gold italic font-serif-accent text-xl md:text-2xl opacity-90">
                                     Strengthening judgement, not replacing it.
                                 </p>
                             </div>
@@ -64,4 +64,7 @@ const CoachingMoments: React.FC = () => {
 };
 
 export default CoachingMoments;
+
+
+
 

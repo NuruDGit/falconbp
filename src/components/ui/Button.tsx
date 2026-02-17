@@ -10,7 +10,6 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     size?: ButtonSize;
     icon?: LucideIcon;
     iconPosition?: 'left' | 'right';
-    asChild?: boolean;
     href?: string;
     children: React.ReactNode;
 }
@@ -23,7 +22,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         icon: Icon,
         iconPosition = 'right',
         children,
-        asChild,
         href,
         ...props 
     }, ref) => {

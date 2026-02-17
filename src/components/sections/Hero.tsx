@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import csuiteImage from '@/assets/images/c-suite-executives2.jpg';
@@ -16,8 +16,8 @@ const Hero: React.FC = () => {
             <div className="max-w-300 mx-auto px-6 w-full relative z-10">
                 <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
                     <h1 className="font-technical text-[clamp(2.5rem,7vw,6rem)] leading-[1.05] text-white font-medium tracking-tight mb-10 animate-fade-in-up">
-                        Sharper thinking when<br className="hidden md:block" />{" "}
-                        <span className="text-brand-gold font-cinzel italic font-normal">the decision stays with you.</span>
+                        Sharper thinking when{" "}
+                        <span className="text-brand-gold font-serif-accent italic font-normal lg:whitespace-nowrap">the decision stays with you.</span>
                     </h1>
 
                     <p className="text-[clamp(1.1rem,1.5vw,1.35rem)] text-white/70 max-w-3xl font-light leading-relaxed mb-12 animate-fade-in-up [animation-delay:0.2s]">
@@ -49,3 +49,7 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
+
+
+

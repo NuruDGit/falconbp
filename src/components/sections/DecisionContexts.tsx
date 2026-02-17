@@ -31,7 +31,7 @@ const DecisionContexts: React.FC = () => {
                 <div className="mb-20 max-w-3xl">
                     <h2 className="text-4xl md:text-5xl font-technical mb-8 leading-tight">
                         Built for leaders who<br className="hidden md:block" />{" "}
-                        <span className="text-brand-gold italic font-light">cannot delegate responsibility.</span>
+                        <span className="text-brand-gold italic font-serif-accent font-light">cannot delegate responsibility.</span>
                     </h2>
                     <p className="text-white/60 text-xl font-light leading-relaxed">
                         Our clients are accountable for outcomes, not opinions. They operate where uncertainty is costly and delay creates risk.
@@ -44,7 +44,7 @@ const DecisionContexts: React.FC = () => {
                             <div className="w-14 h-14 bg-brand-gold/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-gold/20 transition-all">
                                 <context.icon className="w-7 h-7 text-brand-gold" />
                             </div>
-                            <h3 className="text-xl font-technical mb-4 group-hover:text-brand-gold transition-colors">{context.title}</h3>
+                            <h3 className="text-xl font-serif-accent italic text-brand-gold mb-4 group-hover:text-brand-gold transition-colors">{context.title}</h3>
                             <p className="text-white/50 text-sm leading-relaxed font-light">
                                 {context.desc}
                             </p>

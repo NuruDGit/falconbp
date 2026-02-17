@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
                     <span className="text-brand-gold font-technical text-[0.6rem] tracking-[0.4em] uppercase mb-10 block opacity-80">PRIVACY POLICY</span>
                     <h1 className="text-5xl md:text-7xl font-technical mb-12 leading-[1.1] tracking-tight">
                         <span className="text-white">Privacy and</span><br className="hidden md:block" />{" "}
-                        <span className="text-brand-gold italic font-cinzel opacity-90">discretion.</span>
+                        <span className="text-brand-gold italic font-serif-accent opacity-90">discretion.</span>
                     </h1>
                     <div className="max-w-3xl mx-auto">
                         <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed">
@@ -115,3 +115,6 @@ export default function PrivacyPolicyPage() {
         </section>
     );
 }
+
+
+

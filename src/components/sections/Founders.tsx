@@ -6,7 +6,7 @@ import quincyImage from '@/assets/images/quincy-beukes.png';
 
 const founders = [
     {
-        name: "Joel Arcus",
+        name: "Joel Arcus (ACC, CPQC)",
         role: "Co-Founder & Managing Partner",
         image: joelImage,
         bio: "Joel's work focuses on sharpening judgement, reducing distortion and helping leaders think clearly under pressure.",
@@ -19,7 +19,7 @@ const founders = [
         ]
     },
     {
-        name: "Quincy Beukes",
+        name: "Quincy Beukes (MBA(Cum Laude), ELP, AMP, ChBP(SA))",
         role: "Co-Founder & Research Partner",
         image: quincyImage,
         bio: "Quincy's work focuses on transforming complex external signal into decision-grade clarity at the point of commitment.",
@@ -40,6 +40,9 @@ const Founders: React.FC = () => {
                 <div className="flex flex-col items-center mb-16 text-center">
                     <span className="label-tech mb-4">THE PARTNERSHIP</span>
                     <h2 className="mb-6">A partnership built for consequence.</h2>
+                    <p className="max-w-4xl text-white/60 text-lg md:text-xl font-light leading-relaxed">
+                        We are not designed for outsourced decision-making, early-stage experimentation or operational delegation. We work with leaders who carry responsibility and want stronger clarity, not someone else to decide for them.
+                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

@@ -45,7 +45,7 @@ export default function InternalJudgementPage() {
                         </p>
                         <div className="frosted-glass rounded-[2rem] p-8 md:p-10">
                             <p className="label-tech mb-6">THE AIM</p>
-                            <p className="text-brand-gold italic font-cinzel text-xl md:text-2xl opacity-90">
+                            <p className="text-brand-gold italic font-serif-accent text-xl md:text-2xl opacity-90">
                                 The aim is not certainty. The aim is coherence.
                             </p>
                             <div className="mt-8 accent-divider" />
@@ -167,7 +167,7 @@ export default function InternalJudgementPage() {
                             This protects quality, discretion and the integrity of the coaching. It also ensures that the leader remains responsible for implementation and accountability, rather than outsourcing discipline to the coach.
                         </p>
                         <div className="frosted-glass rounded-[2rem] p-8 md:p-10">
-                            <p className="text-brand-gold italic font-cinzel text-xl opacity-90">
+                            <p className="text-brand-gold italic font-serif-accent text-xl opacity-90">
                                 The work is disciplined, time-bound and decision-led.
                             </p>
                         </div>
@@ -180,4 +180,7 @@ export default function InternalJudgementPage() {
         </div>
     );
 }
+
+
+
 

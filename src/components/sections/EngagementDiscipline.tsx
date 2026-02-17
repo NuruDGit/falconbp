@@ -1,7 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
 import PricingCalculator from '../PricingCalculator';
-import worldMap from '@/assets/images/world_map.svg';
 
 const EngagementDiscipline: React.FC = () => {
     return (

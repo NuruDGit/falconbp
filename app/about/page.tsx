@@ -83,7 +83,7 @@ export default function AboutPage() {
                                 </p>
                             </div>
                             <div className="lg:col-span-5 flex items-center">
-                                <p className="text-brand-gold italic font-cinzel text-xl md:text-2xl opacity-90">
+                                <p className="text-brand-gold italic font-serif-accent text-xl md:text-2xl opacity-90">
                                     Trust is not a by-product of our work. It is the product.
                                 </p>
                             </div>
@@ -108,7 +108,7 @@ export default function AboutPage() {
                             <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
                                 <div className="lg:col-span-7 p-10 md:p-12 space-y-6">
                                     <div>
-                                        <h3 className="text-2xl md:text-3xl font-technical text-white mb-2">Joel Arcus</h3>
+                                        <h3 className="text-2xl md:text-3xl font-technical text-white mb-2">Joel Arcus (ACC, CPQC)</h3>
                                         <p className="label-tech text-brand-gold">Co-Founder &amp; Managing Partner</p>
                                     </div>
                                     <p className="text-white/70 font-light leading-relaxed">
@@ -136,7 +136,7 @@ export default function AboutPage() {
                                 <div className="lg:col-span-5 relative min-h-[320px] lg:min-h-[420px]">
                                     <Image
                                         src={require('@/assets/images/joel-arcus.png')}
-                                        alt="Joel Arcus"
+                                        alt="Joel Arcus (ACC, CPQC)"
                                         fill
                                         className="object-cover object-top"
                                     />
@@ -150,7 +150,7 @@ export default function AboutPage() {
                                 <div className="lg:col-span-5 relative min-h-[320px] lg:min-h-[420px] order-last lg:order-first">
                                     <Image
                                         src={require('@/assets/images/quincy-beukes.png')}
-                                        alt="Quincy Beukes"
+                                        alt="Quincy Beukes (MBA(Cum Laude), ELP, AMP, ChBP(SA))"
                                         fill
                                         className="object-cover object-top"
                                     />
@@ -158,7 +158,7 @@ export default function AboutPage() {
                                 </div>
                                 <div className="lg:col-span-7 p-10 md:p-12 space-y-6">
                                     <div>
-                                        <h3 className="text-2xl md:text-3xl font-technical text-white mb-2">Quincy Beukes</h3>
+                                        <h3 className="text-2xl md:text-3xl font-technical text-white mb-2">Quincy Beukes (MBA(Cum Laude), ELP, AMP, ChBP(SA))</h3>
                                         <p className="label-tech text-brand-gold">Co-Founder &amp; Research Partner</p>
                                     </div>
                                     <p className="text-white/70 font-light leading-relaxed">
@@ -192,4 +192,7 @@ export default function AboutPage() {
         </div>
     );
 }
+
+
+
 

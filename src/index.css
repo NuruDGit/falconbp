@@ -1,5 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:ital,wght@0,400;0,600;0,700;1,400;1,600&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
 
 @theme {
   --color-brand-navy: #151c2f;
@@ -9,7 +9,7 @@
 
   --font-technical: "IBM Plex Sans", "monospace";
   --font-primary: "Inter", "system-ui", "-apple-system", "sans-serif";
-  --font-cinzel: "Cinzel", "serif";
+  --font-serif-accent: "IBM Plex Serif", "serif";
 
   --spacing-section: clamp(4rem, 8vh, 10rem);
   --spacing-gutter: clamp(3rem, 5vh, 6rem);
@@ -57,7 +57,7 @@
   }
 
   h3 {
-    @apply text-2xl md:text-3xl font-cinzel italic text-brand-gold opacity-90;
+    @apply text-2xl md:text-3xl font-serif-accent italic text-brand-gold opacity-90;
   }
 
   p {
@@ -107,3 +107,6 @@
     hyphens: auto;
   }
 }
+
+
+

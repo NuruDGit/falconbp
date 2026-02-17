@@ -197,7 +197,7 @@ const ResearchPreview: React.FC = () => {
                                     <div className="flex-1">
                                         <h3 id="research-access-title" className="mb-2">
                                             Request access to<br className="hidden md:block" />{" "}
-                                            <span className="text-brand-gold italic font-cinzel opacity-90">sample research</span>
+                                            <span className="text-brand-gold italic font-serif-accent opacity-90">sample research</span>
                                         </h3>
                                         <p className="text-sm">
                                             Access to sample research is intentionally limited to decision-makers and senior sponsors.
@@ -328,4 +328,7 @@ const ResearchPreview: React.FC = () => {
 };
 
 export default ResearchPreview;
+
+
+
 
