@@ -1,6 +1,7 @@
 import { useEffect, useCallback } from 'react';
 
 type Recaptcha = {
+  ready: (cb: () => void) => void;
   execute: (siteKey: string, options: { action: string }) => Promise<string>;
 };
 
@@ -13,13 +14,21 @@ type WindowWithRecaptcha = Window & {
  */
 export function useRecaptcha() {
   useEffect(() => {
+    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
     const recaptchaWindow = window as WindowWithRecaptcha;
+    if (!siteKey) {
+      return;
+    }
+
+    const existingScript = document.querySelector<HTMLScriptElement>('script[data-recaptcha="true"]');
+
     // Load reCAPTCHA script
-    if (typeof window !== 'undefined' && !recaptchaWindow.grecaptcha) {
+    if (typeof window !== 'undefined' && !recaptchaWindow.grecaptcha && !existingScript) {
       const script = document.createElement('script');
-      script.src = 'https://www.google.com/recaptcha/api.js';
+      script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
       script.async = true;
       script.defer = true;
+      script.setAttribute('data-recaptcha', 'true');
       document.head.appendChild(script);
     }
   }, []);
@@ -39,10 +48,21 @@ export function useRecaptcha() {
         return null;
       }
 
-      const token = await recaptchaWindow.grecaptcha.execute(
-        siteKey,
-        { action: 'submit' }
-      );
+      const token = await new Promise<string>((resolve, reject) => {
+        recaptchaWindow.grecaptcha?.ready(async () => {
+          try {
+            const generatedToken = await recaptchaWindow.grecaptcha?.execute(siteKey, { action: 'submit' });
+            if (!generatedToken) {
+              reject(new Error('Empty reCAPTCHA token'));
+              return;
+            }
+            resolve(generatedToken);
+          } catch (executeError) {
+            reject(executeError);
+          }
+        });
+      });
+
       return token;
     } catch (error) {
       console.error('Error getting reCAPTCHA token:', error);

@@ -33,8 +33,16 @@ export async function verifyRecaptcha(token: string, secretKey: string): Promise
     });
 
     const data = await response.json();
-    // Score threshold of 0.5 means it's at least somewhat likely to be legitimate
-    return data.success && (data.score ?? 0) > 0.5;
+    if (!data?.success) {
+      return false;
+    }
+
+    // For v3 keys, enforce score threshold. For non-score responses, success is sufficient.
+    if (typeof data.score === 'number') {
+      return data.score > 0.5;
+    }
+
+    return true;
   } catch (error) {
     console.error('reCAPTCHA verification failed:', error);
     return false;
