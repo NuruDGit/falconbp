@@ -3,10 +3,18 @@ import { Resend } from 'resend';
 import { sanitizeInput, isValidEmail, verifyTurnstile } from '@/lib/security';
 import { checkRateLimit } from '@/lib/rateLimit';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: NextRequest) {
   try {
+    const resendApiKey = process.env.RESEND_API_KEY;
+    if (!resendApiKey) {
+      return NextResponse.json(
+        { error: 'Server misconfiguration: missing RESEND_API_KEY' },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(resendApiKey);
+
     // Get client IP for rate limiting
     const forwardedFor = request.headers.get('x-forwarded-for');
     const ip =
