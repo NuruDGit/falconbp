@@ -48,6 +48,9 @@ const ValueProp: React.FC = () => {
                         Designed for decisions that<br className="hidden md:block" />{" "}
                         <span className="text-brand-gold italic font-serif-accent opacity-90">cannot afford mistakes.</span>
                     </h2>
+                    <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed">
+                        This is not traditional consulting. We do not deliver recommendations for delegated execution. We work alongside decision-makers to strengthen judgement where responsibility cannot be outsourced.
+                    </p>
                 </div>
 
                 <div className="relative">

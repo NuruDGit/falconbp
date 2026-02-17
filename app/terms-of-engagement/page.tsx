@@ -23,120 +23,117 @@ export default function TermsOfEngagementPage() {
                         TERMS OF ENGAGEMENT
                     </span>
                     <h1 className="text-5xl md:text-7xl font-technical mb-12 leading-[1.1] tracking-tight">
-                        <span className="text-white">Engagement</span><br className="hidden md:block" />{" "}
+                        <span className="text-white">Decision support</span><br className="hidden md:block" />{' '}
                         <span className="text-brand-gold italic font-serif-accent opacity-90">and boundaries.</span>
                     </h1>
                     <div className="max-w-3xl mx-auto">
                         <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed">
-                            These Terms of Engagement govern professional interactions between FalconBridge Partners
-                            and any individual or organisation seeking or receiving advisory, coaching or research services.
+                            These Terms of Engagement govern services provided by FalconBridge Partners FZC LLC. FalconBridge provides decision support services designed to strengthen judgement while preserving the authority of the client.
                         </p>
                     </div>
                 </div>
 
                 <div className="space-y-10 max-w-3xl text-left mx-auto mt-16">
                     <div className="text-white/50 text-sm font-light">
-                        FalconBridge Partners FZ-LLC
-                        <span className="mx-2 text-white/30">•</span>
-                        Last updated: February 10, 2026
+                        FalconBridge Partners FZC LLC
+                        <span className="mx-2 text-white/30">&#8226;</span>
+                        Last updated: 16 February 2026
                     </div>
 
                     <p className="text-white/60 font-light leading-relaxed">
-                        FalconBridge Partners provides decision support services to founders, executives, boards and
-                        investors operating in high-pressure environments. Our services include business research,
-                        executive coaching and strategic advisory.
+                        By engaging FalconBridge Partners FZC LLC (&quot;FalconBridge&quot;, &quot;we&quot;, &quot;us&quot;), you agree to these Terms. Where a separate written scope, proposal or engagement letter exists, it will define the deliverables, fees and timelines for that engagement.
                     </p>
 
                     <section className="space-y-4">
                         <h2 className="text-2xl md:text-3xl font-technical text-white">1. Nature of Services</h2>
                         <p className="text-white/60 font-light leading-relaxed">
-                            All services provided by FalconBridge Partners are advisory and supportive in nature. We
-                            do not act as decision-makers, fiduciaries or authorised representatives on behalf of clients.
+                            FalconBridge provides decision support services, including decision-bound executive coaching, decision-led research and analysis and strategic advisory aligned to defined decision frames.
                         </p>
                         <p className="text-white/60 font-light leading-relaxed">
-                            The responsibility for all decisions, actions and outcomes remains entirely with the client at all times.
-                        </p>
-                        <p className="text-white/60 font-light leading-relaxed">
-                            Our role is to support clarity, judgement and execution through structured insight, reflection and advisory input.
+                            We do not assume decision-making authority. All final decisions remain the responsibility of the client.
                         </p>
                     </section>
 
                     <section className="space-y-4">
-                        <h2 className="text-2xl md:text-3xl font-technical text-white">2. Decision Responsibility</h2>
-                        <p className="text-white/60 font-light leading-relaxed">Clients acknowledge that:</p>
-                        <ul className="space-y-3 text-white/60 font-light leading-relaxed list-disc pl-5">
-                            <li>FalconBridge Partners does not make decisions on their behalf</li>
-                            <li>All decisions are taken by the client using their own judgement</li>
-                            <li>Any action taken following our work is at the client&apos;s sole discretion</li>
-                        </ul>
+                        <h2 className="text-2xl md:text-3xl font-technical text-white">2. Scope of Engagement</h2>
                         <p className="text-white/60 font-light leading-relaxed">
-                            We support decision quality. We do not assume decision ownership.
+                            Each engagement is defined by a specific decision frame, scope and agreed deliverables. Any expansion of scope must be agreed in writing.
+                        </p>
+                        <p className="text-white/60 font-light leading-relaxed">
+                            Unless otherwise agreed in writing, services are advisory in nature and outputs are prepared for the client&apos;s internal use. No guarantee of outcome is provided.
                         </p>
                     </section>
 
                     <section className="space-y-4">
-                        <h2 className="text-2xl md:text-3xl font-technical text-white">3. Research Scope</h2>
+                        <h2 className="text-2xl md:text-3xl font-technical text-white">3. Professional Boundaries</h2>
                         <p className="text-white/60 font-light leading-relaxed">
-                            Any research provided is based on secondary information, publicly available sources and
-                            professional synthesis. Research outputs are not guarantees of outcome and should not be
-                            treated as exhaustive, predictive or primary data collection.
-                        </p>
-                        <p className="text-white/60 font-light leading-relaxed">
-                            Research is intended to inform thinking, not replace due diligence, professional advice or independent verification.
+                            FalconBridge does not provide legal advice, tax advice, investment advice, medical advice or psychological treatment. Clients are responsible for seeking independent professional advice where required.
                         </p>
                     </section>
 
                     <section className="space-y-4">
-                        <h2 className="text-2xl md:text-3xl font-technical text-white">4. Coaching Scope</h2>
+                        <h2 className="text-2xl md:text-3xl font-technical text-white">4. Decision Responsibility</h2>
                         <p className="text-white/60 font-light leading-relaxed">
-                            Executive coaching services are professional development services only. Coaching is not therapy,
-                            counselling, medical treatment, legal advice or financial advice.
+                            FalconBridge provides structured insight, analysis and perspective. Responsibility for interpretation, implementation, financial outcomes, legal consequences and operational execution remains solely with the client.
                         </p>
                         <p className="text-white/60 font-light leading-relaxed">
-                            Clients remain responsible for their mental, emotional and physical wellbeing and for seeking
-                            appropriate professional support where required.
+                            Our work is designed to strengthen judgement, not replace it.
                         </p>
                     </section>
 
                     <section className="space-y-4">
-                        <h2 className="text-2xl md:text-3xl font-technical text-white">5. Advisory Scope</h2>
+                        <h2 className="text-2xl md:text-3xl font-technical text-white">5. Confidentiality</h2>
                         <p className="text-white/60 font-light leading-relaxed">
-                            Strategic advisory services support problem structuring, option evaluation and execution thinking.
-                            FalconBridge Partners does not assume responsibility for implementation unless explicitly agreed in writing.
+                            All engagements are confidential. FalconBridge will not disclose client information, engagement details or deliverables without explicit consent, except where required by law.
+                        </p>
+                        <p className="text-white/60 font-light leading-relaxed">
+                            Clients agree to treat FalconBridge methodologies and proprietary materials as confidential.
                         </p>
                     </section>
 
                     <section className="space-y-4">
-                        <h2 className="text-2xl md:text-3xl font-technical text-white">6. Limitation of Liability</h2>
+                        <h2 className="text-2xl md:text-3xl font-technical text-white">6. Fees and Payment</h2>
                         <p className="text-white/60 font-light leading-relaxed">
-                            To the fullest extent permitted by law, FalconBridge Partners shall not be liable for any loss,
-                            damage or outcome arising directly or indirectly from decisions made by the client.
-                        </p>
-                        <p className="text-white/60 font-light leading-relaxed">
-                            All services are provided on a best-efforts basis without warranty of specific outcomes.
+                            Fees, payment terms and scope are defined in individual engagement agreements. Unless otherwise specified, fees are exclusive of applicable taxes and invoices are payable within the agreed timeframe. Late payments may result in suspension of services.
                         </p>
                     </section>
 
                     <section className="space-y-4">
-                        <h2 className="text-2xl md:text-3xl font-technical text-white">7. Confidentiality</h2>
+                        <h2 className="text-2xl md:text-3xl font-technical text-white">7. Limitation of Liability</h2>
                         <p className="text-white/60 font-light leading-relaxed">
-                            All client engagements are treated as confidential. Information shared is used solely for the
-                            purposes of service delivery unless disclosure is required by law.
+                            To the fullest extent permitted by applicable law, FalconBridge shall not be liable for indirect, consequential or reputational loss.
+                        </p>
+                        <p className="text-white/60 font-light leading-relaxed">
+                            Liability for any claim arising from an engagement shall be limited to the total fees paid for that engagement.
                         </p>
                     </section>
 
                     <section className="space-y-4">
-                        <h2 className="text-2xl md:text-3xl font-technical text-white">8. Governing Law</h2>
+                        <h2 className="text-2xl md:text-3xl font-technical text-white">8. Intellectual Property</h2>
                         <p className="text-white/60 font-light leading-relaxed">
-                            These Terms are governed by the laws of the United Arab Emirates.
+                            All frameworks, methodologies and proprietary materials remain the intellectual property of FalconBridge. Clients are granted a non-transferable licence to use deliverables for internal decision-making purposes only.
                         </p>
                     </section>
+
+                    <section className="space-y-4">
+                        <h2 className="text-2xl md:text-3xl font-technical text-white">9. Termination</h2>
+                        <p className="text-white/60 font-light leading-relaxed">
+                            Either party may terminate an engagement in writing in accordance with the agreed scope terms. Fees for work completed up to the date of termination remain payable.
+                        </p>
+                    </section>
+
+                    <section className="space-y-4">
+                        <h2 className="text-2xl md:text-3xl font-technical text-white">10. Governing Law</h2>
+                        <p className="text-white/60 font-light leading-relaxed">
+                            These Terms of Engagement are governed by the laws of the United Arab Emirates. Any disputes shall be subject to the jurisdiction of the competent courts of the UAE.
+                        </p>
+                    </section>
+
+                    <p className="text-white/60 font-light leading-relaxed">
+                        FalconBridge Partners is a private strategic partnership providing boardroom clarity and decision-grade research for leaders in moments of consequence. All engagements are confidential and by referral or introduction only.
+                    </p>
                 </div>
             </div>
         </section>
     );
 }
-
-
-
-

@@ -15,7 +15,7 @@ const DecisionSystemOverview: React.FC = () => {
                         <div className="space-y-8 max-w-xl">
                             <p>
                                 A disciplined approach designed for uncertainty, pressure and
-                                incomplete information—without diluting authority.
+                                incomplete information, without diluting authority.
                             </p>
                             <p>
                                 Internal judgement, external signal and execution reality are bound
