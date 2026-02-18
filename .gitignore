@@ -13,3 +13,4 @@ dist
 dist-ssr
 *.local
 dev_server.log
+dev_server.err.log

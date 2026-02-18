@@ -1,12 +1,13 @@
-import DOMPurify from 'isomorphic-dompurify';
-
 /**
  * Sanitize user input to prevent XSS attacks
  */
 export function sanitizeInput(input: string): string {
   if (!input) return '';
-  // Remove any HTML tags and scripts
-  return DOMPurify.sanitize(input, { ALLOWED_TAGS: [] }).trim();
+  // Keep this server-safe: strip tags without DOMPurify to avoid ESM/CJS runtime issues in serverless.
+  return input
+    .replace(/<[^>]*>/g, '')
+    .replace(/&[a-zA-Z0-9#]+;/g, '')
+    .trim();
 }
 
 /**
