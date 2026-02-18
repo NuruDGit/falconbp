@@ -94,7 +94,7 @@ export async function POST(request: NextRequest) {
     const emailResult = await resend.emails.send({
       from: process.env.RESEND_FROM || 'noreply@notifications.falconbp.com',
       to: process.env.RESEND_CONTACT_EMAIL || 'engagement@falconbp.com',
-      reply_to: email,
+      replyTo: email,
       subject: 'New Contact Form Submission',
       html: buildBrandedEmail({
         title: 'New contact request',

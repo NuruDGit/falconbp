@@ -110,7 +110,7 @@ export async function POST(request: NextRequest) {
     const emailResult = await resend.emails.send({
       from: process.env.RESEND_FROM || 'noreply@notifications.falconbp.com',
       to: process.env.RESEND_RESEARCH_EMAIL || 'researchteam@falconbp.com',
-      reply_to: email,
+      replyTo: email,
       subject: 'New Research Access Request - Manual Review Required',
       html: buildBrandedEmail({
         title: 'New research access request',
