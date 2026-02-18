@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { sanitizeInput, isValidEmail, verifyTurnstile } from '@/lib/security';
+import { buildBrandedEmail } from '@/lib/emailTemplates';
 import { checkRateLimit } from '@/lib/rateLimit';
 
 export async function POST(request: NextRequest) {
@@ -98,19 +99,25 @@ export async function POST(request: NextRequest) {
     }
 
     // Send email to research team for manual review
+    const fields = [
+      { label: 'Full name', value: fullName },
+      { label: 'Work email', value: email },
+      { label: 'Organisation', value: organization },
+      { label: 'Role / title', value: role },
+      ...(decisionContext ? [{ label: 'Decision context', value: decisionContext }] : []),
+    ];
+
     const emailResult = await resend.emails.send({
       from: process.env.RESEND_FROM || 'noreply@notifications.falconbp.com',
       to: process.env.RESEND_RESEARCH_EMAIL || 'researchteam@falconbp.com',
+      reply_to: email,
       subject: 'New Research Access Request - Manual Review Required',
-      html: `
-        <h2>Research Access Request</h2>
-        <p><strong>Name:</strong> ${fullName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Organization:</strong> ${organization}</p>
-        <p><strong>Role/Title:</strong> ${role}</p>
-        ${decisionContext ? `<p><strong>Decision Context:</strong></p><p>${decisionContext.replace(/\n/g, '<br>')}</p>` : ''}
-        <p style="color: #999; font-size: 12px; margin-top: 20px;">This request requires manual review before granting access.</p>
-      `,
+      html: buildBrandedEmail({
+        title: 'New research access request',
+        subtitle: 'Manual review required before granting access.',
+        fields,
+        footerNote: 'This request requires manual review before granting access.',
+      }),
     });
 
     if (emailResult.error) {

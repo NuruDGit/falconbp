@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { sanitizeInput, isValidEmail, verifyTurnstile } from '@/lib/security';
+import { buildBrandedEmail } from '@/lib/emailTemplates';
 import { checkRateLimit } from '@/lib/rateLimit';
 
 export async function POST(request: NextRequest) {
@@ -83,18 +84,23 @@ export async function POST(request: NextRequest) {
     }
 
     // Send email to engagement team
+    const fields = [
+      { label: 'Full name', value: fullName },
+      { label: 'Work email', value: email },
+      ...(organization ? [{ label: 'Organisation', value: organization }] : []),
+      { label: 'Decision context', value: decisionContext },
+    ];
+
     const emailResult = await resend.emails.send({
       from: process.env.RESEND_FROM || 'noreply@notifications.falconbp.com',
       to: process.env.RESEND_CONTACT_EMAIL || 'engagement@falconbp.com',
+      reply_to: email,
       subject: 'New Contact Form Submission',
-      html: `
-        <h2>New Contact Request</h2>
-        <p><strong>Name:</strong> ${fullName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        ${organization ? `<p><strong>Organization:</strong> ${organization}</p>` : ''}
-        <p><strong>Decision Context:</strong></p>
-        <p>${decisionContext.replace(/\n/g, '<br>')}</p>
-      `,
+      html: buildBrandedEmail({
+        title: 'New contact request',
+        subtitle: 'A new confidential intake request has been submitted.',
+        fields,
+      }),
     });
 
     if (emailResult.error) {
